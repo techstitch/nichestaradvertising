@@ -1,0 +1,10 @@
+.red {
+    color: #BE1E28;
+}
+
+.section-heading {
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 3rem;
+}
