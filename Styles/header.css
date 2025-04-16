@@ -34,6 +34,7 @@
 #header button:hover {
     background-color: #fff;
     color: #BE1E28;
+    
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
