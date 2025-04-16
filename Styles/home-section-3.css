@@ -1,0 +1,30 @@
+#home-section-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+#home-section-3 img {
+    width: 50%;
+}
+
+.home-section-3-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 46%;
+    align-items: start;
+}
+
+.home-section-3-inner div {
+    display: flex;
+    gap: 15px;
+}
+
+#home-section-3 .home-section-3-inner img {
+    width: 50px;
+}
+#home-section-3 h2{
+    font-size: 1.8rem;
+}

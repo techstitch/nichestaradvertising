@@ -1,0 +1,101 @@
+body {
+    background-color: #000000;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../Assets/Fonts/ClashDisplay-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../Assets/Fonts/ClashDisplay-Light.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../Assets/Fonts/ClashDisplay-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../Assets/Fonts/ClashDisplay-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../Assets/Fonts/ClashDisplay-Semibold.otf') format('opentype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'ClashDisplay';
+    src: url('../Assets/Fonts/ClashDisplay-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+h1 {
+    font-family: 'ClashDisplay', sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+
+h2 {
+    font-family: 'ClashDisplay', sans-serif;
+    font-weight: 500;
+    color: #fff;
+}
+
+p,
+a {
+    font-family: 'ClashDisplay', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+}
+
+button {
+    font-family: 'ClashDisplay', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.page-width {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 0 5rem;
+}
+
+#loop-carousel-strip-1 {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    background: black;
+    /* optional for contrast */
+    padding: 1rem 0;
+}
+
+.carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: max-content;
+}
+
+.carousel-item {
+    color: white;
+    font-family: 'ClashDisplay', sans-serif;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.carousel-separator {
+    width: 1.5rem;
+    height: auto;
+}

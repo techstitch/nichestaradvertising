@@ -1,0 +1,39 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: solid 1px #ffffff90;
+}
+
+#header img {
+    width: 60px;
+    height: auto;
+}
+
+#header a {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+#header nav {
+    display: flex;
+    gap: 32px;
+}
+
+#header button {
+    background-color: #BE1E28;
+    color: #fff;
+    border: none;
+    padding: .5rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+#header button:hover {
+    background-color: #fff;
+    color: #BE1E28;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}

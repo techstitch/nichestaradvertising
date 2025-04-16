@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Niche Star Advertising | Home</title>
+        <link rel="stylesheet" href="Styles/main.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+        <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+        <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js"></script>
+        <link rel="icon" type="image/png" href="Assets/Logo.svg">
+    </head>
+    <body>
+        <header class="page-width" id="header">
+            <script>
+                fetch('Snippets/header.html')
+                    .then(res => res.text())
+                    .then(data => {
+                      document.getElementById('header').innerHTML = data;
+                });
+            </script>
+        </header>
+        <section class="page-width" id="home-section-1">
+            <link rel="stylesheet" href="Styles/home-section-1.css">
+            <p class="home-section-1-p">Niche Star Advertising, established in
+                2022, produces all types
+                of POS materials for <span>advertising, events, visual
+                    merchandising,
+                    and retail displays.</span></p>
+            <div class="home-section-1-right-div">
+                <img src="Assets/Red_Blurred_Circle.png">
+                <img src="Assets/Logo.svg">
+            </div>
+        </section>
+        <section class="page-width" id="home-section-2">
+            <link rel="stylesheet" href="Styles/home-section-2.css">
+            <img class="home-section-2-top-image-1" src="Assets/home-section-2-image-1.png">
+            <div class="video-wrapper">
+                <img class="home-section-2-top-image-2" src="Assets/home-section-2-image-2.png">
+        
+                <!-- Video element without controls, for the page -->
+                <video autoplay muted loop playsinline class="home-section-2-video" id="videoModal" data-fancybox="video" >
+                    <source src="Assets/WhatsApp Video 2025-02-01 at 19.25.58_ed89b629.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+        
+                <img class="home-section-2-bottom-image-2" src="Assets/home-section-2-image-2.png">
+            </div>
+            <img class="home-section-2-bottom-image-1" src="Assets/home-section-2-image-1.png">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css">
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
+            
+            <script>
+                // Initialize FancyBox for video elements
+                $('[data-fancybox="video"]').fancybox({
+                    type: 'video',  // Ensure the content type is 'video'
+                    buttons: [
+                        "play",  // Play button
+                        "fullScreen",  // Fullscreen button
+                        "close",  // Close button
+                        "volume",  // Volume control button
+                        "download"  // Optional download button
+                    ],
+                    // Add this setting to prevent reloading of the video when closing the modal
+                    onClose: function () {
+                        var video = $('#videoModal')[0];
+                        video.pause();  // Pause the video when closing
+                        video.currentTime = 0;  // Reset the video time to the beginning
+            
+                        // Ensure the video is shown again after closing the modal
+                        $('#videoModal').css('display', 'block');
+                    },
+                    // Prevent reloading the video when opening the modal again
+                    afterLoad: function (current, previous, event) {
+                        var video = $(current.src)[0];
+                        if (video) {
+                            video.play();  // Play video automatically when modal is opened
+                        }
+                        // Add controls to the video when it's in the FancyBox modal
+                        $('#videoModal').prop('controls', true);  // Enable controls when the modal is opened
+                    },
+                    // Ensure that the video is visible after closing the modal
+                    afterClose: function () {
+                        $('#videoModal').css('display', 'block');  // Show the video again after closing the modal
+                        // Remove controls when returning to the page view
+                        $('#videoModal').prop('controls', false);  // Remove controls when the modal is closed
+                    }
+                });
+            </script>
+        </section>        
+        <section class="page-width" id="home-section-3">
+            <link rel="stylesheet" href="Styles/home-section-3.css">
+            <img src="Assets/20240201_144930 1.png">
+            <div class="home-section-3-inner">
+                <div>
+                    <img src="Assets/Logo.svg">
+                    <h2>
+                        We are Niche Star
+                    </h2>
+                </div>
+                <p>
+                    Niche Star Advertising, established in 2022 under Niche
+                    Marketing Management, produces all types of POS materials
+                    for advertising, events, visual merchandising, and retail
+                    displays.
+                </p>
+            </div>
+        </section>
+        <section class="page-width" id="loop-carousel-strip-1">
+            <div class="carousel-track">
+                <div class="carousel-item">Large format printing</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Acrylic Fabrication</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">All kinds of signages</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Display stands & Gondola ends</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Custom T-shirt printing</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Corporate gifts</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+
+                <!-- Duplicate for seamless loop -->
+                <div class="carousel-item">Large format printing</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Acrylic Fabrication</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">All kinds of signages</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Display stands & Gondola ends</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Custom T-shirt printing</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Corporate gifts</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+            </div>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+            <script>
+                const track = document.querySelector(".carousel-track");
+                const totalWidth = track.scrollWidth / 2;
+
+                gsap.to(track, {
+                    x: `-=${totalWidth}`,
+                    duration: 20,
+                    ease: "none",
+                    repeat: -1,
+                    modifiers: {
+                        x: gsap.utils.unitize(x => parseFloat(x) % totalWidth)
+                    }
+                });
+            </script>
+        </section>
+        <section class="page-width" id="home-section-5">
+            <link rel="stylesheet" href="Styles/home-section-5.css">
+            <div class="home-section-5-left-container">
+                <h2>Our Clients</h2>
+                <p>We approach every project with energy, care and big smiles. We
+                    are proud to have worked with some of the biggest names in the
+                    industry.</p>
+                </p>
+            </div>
+            <div class="home-section-5-right-container">
+                <img id="clients_switch_button"
+                    src="Assets/uuid-d757d682-943d-49fd-b438-0061a5d758e1.svg">
+                <ul>
+                    <li class="active">
+                        <img src="Assets/Vector (25).png">
+                    </li>
+                    <li class="active">
+                        <img src="Assets/Vector (25).png">
+                    </li>
+                    <li class="active">
+                        <img src="Assets/Vector (25).png">
+                    </li>
+                    <li class="active">
+                        <img src="Assets/Vector (25).png">
+                    </li>
+                    <li class="active">
+                        <img src="Assets/Vector (25).png">
+                    </li>
+                    <li class="active">
+                        <img src="Assets/Vector (25).png">
+                    </li>
+                    <li>
+                        <img src="Assets/Vector (25).png">
+                    </li>
+                    <li>
+                        <img src="Assets/Vector (25).png">
+                    </li>
+                    <li>
+                        <img src="Assets/Vector (25).png">
+                    </li>
+                    <li>
+                        <img src="Assets/Vector (25).png">
+                    </li>
+                    <li>
+                        <img src="Assets/Vector (25).png">
+                    </li>
+                    <li>
+                        <img src="Assets/Vector (25).png">
+                    </li>
+                </ul>
+            </div>
+            <script>
+                const switchButton = document.getElementById('clients_switch_button');
+                const listItems = document.querySelectorAll('#home-section-5 ul li');
+            
+                let showingFirstSet = true;
+            
+                switchButton.addEventListener('click', () => {
+                    // Rotate the button
+                    gsap.to(switchButton, {
+                        rotation: "+=360",
+                        duration: 0.6,
+                        ease: "power2.inOut"
+                    });
+            
+                    // Split into two sets of 6
+                    const visibleSet = showingFirstSet ? [...listItems].slice(0, 6) : [...listItems].slice(6);
+                    const hiddenSet = showingFirstSet ? [...listItems].slice(6) : [...listItems].slice(0, 6);
+            
+                    // Animate out current items
+                    gsap.to(visibleSet, {
+                        y: -20,
+                        opacity: 0,
+                        stagger: 0.05,
+                        duration: 0.3,
+                        onComplete: () => {
+                            // Hide old, show new
+                            visibleSet.forEach(item => item.classList.remove('active'));
+                            hiddenSet.forEach(item => item.classList.add('active'));
+            
+                            // Animate in new set
+                            gsap.fromTo(hiddenSet,
+                                { y: 20, opacity: 0 },
+                                {
+                                    y: 0,
+                                    opacity: 1,
+                                    stagger: 0.1,
+                                    duration: 0.4,
+                                    ease: "power2.out"
+                                }
+                            );
+                        }
+                    });
+            
+                    showingFirstSet = !showingFirstSet;
+                });
+            </script>
+            
+        </section>
+    </body>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.fromTo(
+          ".home-section-1-right-div img:last-of-type",
+          {
+            x: -120,
+            y: 120,
+            rotation: -10,
+            opacity: 0
+          },
+          {
+            x: 0,
+            y: 0,
+            rotation: 0,
+            opacity: 1,
+            ease: "expo.out",
+            scrollTrigger: {
+              trigger: ".home-section-1-right-div",
+              start: "top bottom",  
+              end: "top 60%",    
+              scrub: true
+            }
+          }
+        );
+        gsap.to(".home-section-1-right-div img:last-of-type", {
+          x: 100,
+          y: -100,
+          ease: "power1.out",
+          scrollTrigger: {
+            trigger: ".home-section-1-right-div",
+            start: "top 60%",    
+            end: "bottom top",  
+            scrub: true
+          }
+        });
+    </script>
+</html>
