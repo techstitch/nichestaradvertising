@@ -72,16 +72,18 @@ button {
     padding: 0 5rem;
 }
 
-#loop-carousel-strip-1 {
+#loop-carousel-strip-1,
+#loop-carousel-strip-2 {
     overflow: hidden;
     white-space: nowrap;
     width: 100%;
     background: black;
     /* optional for contrast */
     padding: 1rem 0;
+    margin-bottom: 3rem;
 }
 
-.carousel-track {
+.carousel-track, .carousel-track-2 {
     display: flex;
     align-items: center;
     gap: 2rem;

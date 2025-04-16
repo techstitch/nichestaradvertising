@@ -6,9 +6,11 @@
         <title>Niche Star Advertising | Home</title>
         <link rel="stylesheet" href="Styles/main.css">
         <link rel="stylesheet" href="Styles/header.css">
+        <link rel="stylesheet" href="Styles/footer.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
         <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
         <link rel="icon" type="image/png" href="Assets/Logo.svg">
     </head>
     <body>
@@ -281,6 +283,204 @@
                 </div>
             </div>
         </section>
+        <section class="page-width" id="home-section-7">
+            <link rel="stylesheet" href="Styles/home-section-7.css">
+            <div class="home-section-7-container-1">
+                <div class="home-section-7-container-left">
+                    <p class="home-section-7-container-heading">OUR COMMITMENT</p>
+                    <p class="home-section-7-container-subheading">Building a sustainable exhibition industry, one stand at a time</p>
+                    <p class="home-section-7-container-content">Sustainability isn’t a checkbox – it’s at the heart of everything we do. From bold modular stand designs to eco-conscious operations, we’re leading the charge for a greener events industry. As the first Tier 5 ESSA Sustainability Accredited stand builder, we’re redefining exhibitions with net-zero solutions and sustainable materials, shaping a future where impact doesn’t cost the Earth.
+                    </p>
+                </div>
+                <img src="Assets/WhatsApp Image 2024-06-29 at 22.45.23_959283bb 1.png">
+            </div>
+            <div class="home-section-7-container-2">
+                <img src="Assets/Mask group (1).png">
+                <div class="home-section-7-container-left">
+                    <p class="home-section-7-container-heading">OUR PROMISE</p>
+                    <p class="home-section-7-container-subheading">Pushing boundaries to exceed expectations</p>
+                    <p class="home-section-7-container-content">We push the possible and never settle for ‘just enough.’ Whether you need a stunning, sustainable exhibition display stand or an immersive brand experience, we craft innovative spaces that engage, drive results, and maximise ROI.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="page-width" id="loop-carousel-strip-2">
+            <div class="carousel-track-2">
+                <div class="carousel-item">Kind Words</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Kind Words</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Kind Words</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Kind Words</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Kind Words</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Kind Words</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+
+                <!-- Duplicate for seamless loop -->
+                <div class="carousel-item">Kind Words</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Kind Words</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Kind Words</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Kind Words</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Kind Words</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+                <div class="carousel-item">Kind Words</div>
+                <img src="Assets/Logo.svg" class="carousel-separator" />
+            </div>
+            <script>
+                const track_2 = document.querySelector(".carousel-track-2");
+                const totalWidth_2 = track.scrollWidth / 2;
+
+                gsap.to(track_2, {
+                    x: `-=${totalWidth_2}`,
+                    duration: 20,
+                    ease: "none",
+                    repeat: -1,
+                    modifiers: {
+                        x: gsap.utils.unitize(x => parseFloat(x) % totalWidth_2)
+                    }
+                });
+            </script>
+        </section>
+        <section id="home-section-8">
+            <link rel="stylesheet" href="Styles/home-section-8.css">
+            <h2 class="section-heading red">Trusted by brands, SMEs, agencies and event organizers</h2>
+          
+            <div class="home-section-8-testimonial-carousel">
+              <img class="home-section-8-testimonial-left_arrow" src="Assets/left arrow.png" alt="Left">
+          
+              <div class="home-section-8-testimonial-wrapper">
+                <div class="home-section-8-testimonial-carousel-track">
+                  <div class="home-section-8-testimonial">
+                    <div class="home-section-8-testimonial-left">
+                      <p>The Samaritans</p>
+                      <img src="Assets/Mask group (2).png" alt="Logo">
+                    </div>
+                    <div class="home-section-8-testimonial-right">
+                      <img src="Assets/Group 29.png" alt="Stars">
+                      <p>"   We worked with Tecna to create Samaritan's Charity of the Year stand at the London Marathon Running Show. From start to finish, the team were amazing at providing innovative solutions to our branding, storage and customer engagement needs. The finished product was amazing - super high quality. Would definitely recommend working with Tecna for any of your exhibiting needs!   " </p>
+                    </div>
+                  </div>
+                  <div class="home-section-8-testimonial">
+                    <div class="home-section-8-testimonial-left">
+                      <p>Event Co.</p>
+                      <img src="Assets/Mask group (2).png" alt="Logo">
+                    </div>
+                    <div class="home-section-8-testimonial-right">
+                      <img src="Assets/Group 29.png" alt="Stars">
+                      <p>"   We worked with Tecna to create Samaritan's Charity of the Year stand at the London Marathon Running Show. From start to finish, the team were amazing at providing innovative solutions to our branding, storage and customer engagement needs. The finished product was amazing - super high quality. Would definitely recommend working with Tecna for any of your exhibiting needs!   " </p>
+                    </div>
+                  </div>
+                  <div class="home-section-8-testimonial">
+                    <div class="home-section-8-testimonial-left">
+                      <p>Agency XYZ</p>
+                      <img src="Assets/Mask group (2).png" alt="Logo">
+                    </div>
+                    <div class="home-section-8-testimonial-right">
+                      <img src="Assets/Group 29.png" alt="Stars">
+                      <p>"   We worked with Tecna to create Samaritan's Charity of the Year stand at the London Marathon Running Show. From start to finish, the team were amazing at providing innovative solutions to our branding, storage and customer engagement needs. The finished product was amazing - super high quality. Would definitely recommend working with Tecna for any of your exhibiting needs!   " </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <img class="home-section-8-testimonial-right_arrow" src="Assets/right arrow.png" alt="Right">
+            </div>
+            
+            <a class="leave-review-button">Leave a Review</a>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                  const track = document.querySelector('.home-section-8-testimonial-carousel-track');
+                  const testimonials = gsap.utils.toArray('.home-section-8-testimonial');
+                  const arrowLeft = document.querySelector('.home-section-8-testimonial-left_arrow');
+                  const arrowRight = document.querySelector('.home-section-8-testimonial-right_arrow');
+                  const snapPoints = testimonials.map(t => -t.offsetLeft);
+              
+                  let currentIndex = 0;
+                  let dragStartX = 0;
+                  let dragEndX = 0;
+                  const testimonialWidth = testimonials[0].offsetWidth;
+              
+                  const updateActiveStyles = () => {
+                    testimonials.forEach((t, i) => {
+                      gsap.to(t, {
+                        scale: i === currentIndex ? 1 : 0.95,
+                        opacity: i === currentIndex ? 1 : 0.3,
+                        duration: 0.1,
+                        ease: "power2.out"
+                      });
+                    });
+                  };
+              
+                  const scrollToIndex = (index) => {
+                    currentIndex = Math.max(0, Math.min(index, testimonials.length - 1));
+                    gsap.to(track, {
+                      x: snapPoints[currentIndex],
+                      duration: 0.8,
+                      ease: 'power3.out',
+                      onComplete: updateActiveStyles
+                    });
+                  };
+              
+                  arrowLeft.addEventListener('click', () => scrollToIndex(currentIndex - 1));
+                  arrowRight.addEventListener('click', () => scrollToIndex(currentIndex + 1));
+              
+                  Draggable.create(track, {
+                    type: 'x',
+                    edgeResistance: 0.8,
+                    inertia: true,
+                    bounds: {
+                      minX: snapPoints[snapPoints.length - 1],
+                      maxX: snapPoints[0]
+                    },
+                    onPress: function () {
+                      dragStartX = this.x;
+                    },
+                    onRelease: function () {
+                      dragEndX = this.x;
+                      const delta = dragEndX - dragStartX;
+              
+                      if (Math.abs(delta) > testimonialWidth * 0.25) {
+                        if (delta < 0 && currentIndex < testimonials.length - 1) {
+                          currentIndex++;
+                        } else if (delta > 0 && currentIndex > 0) {
+                          currentIndex--;
+                        }
+                      }
+              
+                      scrollToIndex(currentIndex);
+                    },
+                    onDrag: function () {
+                      // Optional: live styling while dragging
+                    },
+                    onThrowUpdate: function () {
+                      // Optional: live feedback during momentum
+                    }
+                  });
+              
+                  // Initial setup
+                  gsap.set(track, { x: snapPoints[0] });
+                  updateActiveStyles();
+                });
+              </script>
+              
+              
+        </section>
+        <footer class="page-width" id="footer">
+            <script>
+                fetch('Snippets/footer.html')
+                    .then(res => res.text())
+                    .then(data => {
+                      document.getElementById('footer').innerHTML = data;
+                });
+            </script>
+        </footer>
     </body>
     <script>
         gsap.registerPlugin(ScrollTrigger);
