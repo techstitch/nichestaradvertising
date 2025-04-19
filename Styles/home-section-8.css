@@ -92,18 +92,20 @@
 .home-section-8-testimonial-left p,
 .home-section-8-testimonial-right p {
     font-size: 1.2rem;
+    color: #fff;
     font-weight: 400;
     margin: 0;
 }
 
 .leave-review-button {
-    background-color: #fff;
-    color: #BE1E28;
+    background-color: #000;
+    color: #fff;
     border-radius: 2000px;
     font-weight: 600;
     font-size: 1.2rem;
     text-align: center;
     width: fit-content;
+    cursor: pointer;
     margin: 0 auto;
     display: flex;
     padding: .6rem 1.8rem;

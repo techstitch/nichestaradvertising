@@ -25,11 +25,10 @@
         </header>
         <section class="page-width" id="home-section-1">
             <link rel="stylesheet" href="Styles/home-section-1.css">
-            <p class="home-section-1-p">Niche Star Advertising, established in
-                2022, produces all types
-                of POS materials for <span>advertising, events, visual
-                    merchandising,
-                    and retail displays.</span></p>
+            <p class="home-section-1-p"><span class="text-only">Established in
+                2022, produces all types of POS materials for</span>
+                <br><span>advertising,</span> <span>events,</span> <span>visual merchandising,</span>
+                    <span>and retail displays.</span></p>
             <div class="home-section-1-right-div">
                 <img src="Assets/Red_Blurred_Circle.png">
                 <img src="Assets/Logo.svg">
@@ -43,7 +42,7 @@
         
                 <!-- Video element without controls, for the page -->
                 <video autoplay muted loop playsinline class="home-section-2-video" id="videoModal" data-fancybox="video" >
-                    <source src="Assets/WhatsApp Video 2025-02-01 at 19.25.58_ed89b629.mp4" type="video/mp4">
+                    <source src="Assets/Niche Star Copy 01 (1).mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
         
@@ -94,7 +93,7 @@
         </section>        
         <section class="page-width" id="home-section-3">
             <link rel="stylesheet" href="Styles/home-section-3.css">
-            <img src="Assets/20240201_144930 1.png">
+            <img src="Assets/47610ee642 (1).jpg">
             <div class="home-section-3-inner">
                 <div>
                     <img src="Assets/Logo.svg">
@@ -257,6 +256,30 @@
             <link rel="stylesheet" href="Styles/home-section-6.css">
             <h2 class="section-heading red">OUR PORTFOLIO</h2>
             <div class="section-6-inner">
+                <div class="portfolio-div">
+                    <img src="Assets/Banners.jpg">
+                    <h3>BANNERS</h3>
+                    <img class="hyperlink_arrow" src="Assets/Group 28 (2).png">
+                    <p>Banners that speak</p>
+                </div>
+                <div class="portfolio-div">
+                    <img src="Assets/Display Stands.jpg">
+                    <h3>BANNERS</h3>
+                    <img class="hyperlink_arrow" src="Assets/Group 28 (2).png">
+                    <p>Banners that speak</p>
+                </div>
+                <div class="portfolio-div">
+                    <img src="Assets/Signages.jpg">
+                    <h3>BANNERS</h3>
+                    <img class="hyperlink_arrow" src="Assets/Group 28 (2).png">
+                    <p>Banners that speak</p>
+                </div>
+                <div class="portfolio-div">
+                    <img src="Assets/Retail Activations.jpg">
+                    <h3>BANNERS</h3>
+                    <img class="hyperlink_arrow" src="Assets/Group 28 (2).png">
+                    <p>Banners that speak</p>
+                </div>
                 <div class="portfolio-div">
                     <img src="Assets/Banners.jpg">
                     <h3>BANNERS</h3>
@@ -488,12 +511,12 @@
           ".home-section-1-right-div img:last-of-type",
           {
             x: -120,
-            y: 120,
+            y: 80,
             rotation: -10,
             opacity: 0
           },
           {
-            x: 0,
+            x: 300,
             y: 0,
             rotation: 0,
             opacity: 1,
@@ -508,7 +531,7 @@
         );
         gsap.to(".home-section-1-right-div img:last-of-type", {
           x: 100,
-          y: -100,
+          y: -240,
           ease: "power1.out",
           scrollTrigger: {
             trigger: ".home-section-1-right-div",

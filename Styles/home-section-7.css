@@ -9,18 +9,20 @@
     display: flex;
     justify-content: center;
     align-items: start;
-    background: linear-gradient(90deg, #401619, #BE1E28);
+    /* background: linear-gradient(90deg, #401619, #BE1E28); */
     border-radius: 15px;
     overflow: hidden;
+    height: 510px;
 }
 
 .home-section-7-container-2 {
     display: flex;
     justify-content: center;
     align-items: start;
-    background: linear-gradient(90deg, #BE1E28, #401619);
+    /* background: linear-gradient(90deg, #BE1E28, #401619); */
     border-radius: 15px;
     overflow: hidden;
+    height: 510px;
 }
 
 .home-section-7-container-left {
@@ -29,11 +31,14 @@
     justify-content: center;
     align-items: start;
     width: 53%;
-    padding: 3rem 2rem 0;
+    padding: 0 2rem 0;
+    height: 100%;
 }
 
 #home-section-7 img {
-    width: 47%;
+    aspect-ratio: 570 / 557;
+    height: 100%;
+    border-radius: 15px;
 }
 
 .home-section-7-container-heading {
@@ -45,7 +50,7 @@
 .home-section-7-container-subheading {
     margin: 0;
     font-size: 2.4rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 2.6rem;
 }
 

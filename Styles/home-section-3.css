@@ -6,25 +6,31 @@
 }
 
 #home-section-3 img {
-    width: 50%;
+    width: 65%;
+    border-radius: 15px;
 }
 
 .home-section-3-inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 46%;
+    width: 33%;
     align-items: start;
+    gap: 10px;
 }
 
 .home-section-3-inner div {
     display: flex;
     gap: 15px;
+    flex-direction: column;
 }
 
 #home-section-3 .home-section-3-inner img {
-    width: 50px;
+    width: 70px;
+    border-radius: 0;
 }
-#home-section-3 h2{
+
+#home-section-3 h2 {
     font-size: 1.8rem;
+    margin: 0;
 }

@@ -1,5 +1,5 @@
 body {
-    background-color: #000000;
+    background-color: #fff;
     margin: 0;
     overflow-x: hidden;
 }
@@ -43,20 +43,20 @@ body {
 h1 {
     font-family: 'ClashDisplay', sans-serif;
     font-weight: 700;
-    color: #fff;
+    color: #000;
 }
 
 h2 {
     font-family: 'ClashDisplay', sans-serif;
     font-weight: 500;
-    color: #fff;
+    color: #000;
 }
 
 p,
 a {
     font-family: 'ClashDisplay', sans-serif;
     font-weight: 300;
-    color: #fff;
+    color: #000;
     text-decoration: none;
 }
 
@@ -67,7 +67,7 @@ button {
 }
 
 .page-width {
-    max-width: 130rem;
+    max-width: 80rem;
     margin: 0 auto;
     padding: 0 5rem;
 }
@@ -77,8 +77,6 @@ button {
     overflow: hidden;
     white-space: nowrap;
     width: 100%;
-    background: black;
-    /* optional for contrast */
     padding: 1rem 0;
     margin-bottom: 3rem;
 }
@@ -91,7 +89,7 @@ button {
 }
 
 .carousel-item {
-    color: white;
+    color: #000;
     font-family: 'ClashDisplay', sans-serif;
     font-size: 1rem;
     white-space: nowrap;

@@ -2,9 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: solid 1px #ffffff90;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
 }
 
 #header img {
@@ -15,26 +14,37 @@
 #header a {
     font-size: 1.2rem;
     font-weight: 400;
+    color: #fff;
+    transition: color 0.3s ease-in;
+}
+
+#header a:hover {
+    color: #BE1E28;
+    transition: color 0.3s ease-in;
 }
 
 #header nav {
     display: flex;
     gap: 32px;
+    background: #000000;
+    padding: .8rem 2.5rem;
+    border-radius: 50px;
 }
 
 #header button {
     background-color: #BE1E28;
     color: #fff;
     border: none;
-    padding: .5rem 2rem;
+    padding: .8rem 2rem;
     font-size: 1.2rem;
     font-weight: 400;
+    border-radius: 50px;
+    transition: all 0.3s ease-in;
 }
 
 #header button:hover {
-    background-color: #fff;
-    color: #BE1E28;
-    
+    background-color: #000;
+    color: #fff;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in;
 }

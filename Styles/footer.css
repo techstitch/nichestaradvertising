@@ -17,6 +17,7 @@ footer {
     margin: 0;
     font-size: 7rem;
     text-wrap: nowrap;
+    color: #fff;
     font-weight: 600;
 }
 
@@ -71,9 +72,11 @@ footer {
     margin: 0 0 1rem;
     font-weight: 500;
     font-size: 1.2rem;
+    color: #fff;
 }
 .footer-column-2 a, .footer-column-3 a{
     font-size: 1rem;
     text-decoration: none;
     margin-bottom: 15px;
+    color: #fff;
 }
