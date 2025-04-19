@@ -153,6 +153,97 @@
                 });
             </script>
         </section>
+        <section id="home-section-4">
+            <link rel="stylesheet" href="Styles/home-section-4.css">
+            <div class="home-section-4-container">
+                <div class="home-section-4-left">
+                  <div class="home-section-4-image-wrapper">
+                    <img src="Assets/Mask group.png" class="home-section-4-image active" />
+                    <img src="Assets/Mask group-1.png" class="home-section-4-image" />
+                    <img src="Assets/Mask group-2.png" class="home-section-4-image" />
+                    <img src="Assets/Mask group-3.png" class="home-section-4-image" />
+                    <img src="Assets/Mask group-4.png" class="home-section-4-image" />
+                    <img src="Assets/Mask group-5.png" class="home-section-4-image" />
+                  </div>
+                </div>
+                <div class="home-section-4-right">
+                  <div class="home-section-4-text-block" data-index="0">
+                    <p class="section-4-heading">Activate</p>
+                    <p class="section-4-content">Ignite unforgettable brand experiences with bold, sensory-driven activations. We craft extraordinary, immersive moments that engage, disrupt, and help forge powerful connections – ensuring your brand doesn’t just show up, it leads the way. We craft extraordinary, immersive moments that engage, disrupt, and help forge powerful connections – ensuring your brand doesn’t just show up, it leads the way.</p>
+                </div>
+                  <div class="home-section-4-text-block" data-index="1">                    <p class="section-4-heading">Activate</p>
+                    <p class="section-4-content">Ignite unforgettable brand experiences with bold, sensory-driven activations. We craft extraordinary, immersive moments that engage, disrupt, and help forge powerful connections – ensuring your brand doesn’t just show up, it leads the way. We craft extraordinary, immersive moments that engage, disrupt, and help forge powerful connections – ensuring your brand doesn’t just show up, it leads the way.</p>
+</div>
+                  <div class="home-section-4-text-block" data-index="2">                    <p class="section-4-heading">Activate</p>
+                    <p class="section-4-content">Ignite unforgettable brand experiences with bold, sensory-driven activations. We craft extraordinary, immersive moments that engage, disrupt, and help forge powerful connections – ensuring your brand doesn’t just show up, it leads the way. We craft extraordinary, immersive moments that engage, disrupt, and help forge powerful connections – ensuring your brand doesn’t just show up, it leads the way.</p>
+</div>
+                  <div class="home-section-4-text-block" data-index="3">                    <p class="section-4-heading">Activate</p>
+                    <p class="section-4-content">Ignite unforgettable brand experiences with bold, sensory-driven activations. We craft extraordinary, immersive moments that engage, disrupt, and help forge powerful connections – ensuring your brand doesn’t just show up, it leads the way. We craft extraordinary, immersive moments that engage, disrupt, and help forge powerful connections – ensuring your brand doesn’t just show up, it leads the way.</p>
+</div>
+                  <div class="home-section-4-text-block" data-index="4">                    <p class="section-4-heading">Activate</p>
+                    <p class="section-4-content">Ignite unforgettable brand experiences with bold, sensory-driven activations. We craft extraordinary, immersive moments that engage, disrupt, and help forge powerful connections – ensuring your brand doesn’t just show up, it leads the way. We craft extraordinary, immersive moments that engage, disrupt, and help forge powerful connections – ensuring your brand doesn’t just show up, it leads the way.</p>
+</div>
+                  <div class="home-section-4-text-block" data-index="4">                    <p class="section-4-heading">Activate</p>
+                    <p class="section-4-content">Ignite unforgettable brand experiences with bold, sensory-driven activations. We craft extraordinary, immersive moments that engage, disrupt, and help forge powerful connections – ensuring your brand doesn’t just show up, it leads the way. We craft extraordinary, immersive moments that engage, disrupt, and help forge powerful connections – ensuring your brand doesn’t just show up, it leads the way.</p>
+</div>
+                </div>
+              </div> 
+              <script>
+                gsap.registerPlugin(ScrollTrigger);
+              
+                const textBlocks = document.querySelectorAll('.home-section-4-text-block');
+                const images = document.querySelectorAll('.home-section-4-image');
+              
+                function showImage(index) {
+                  const img = images[index];
+              
+                  gsap.set(img, {
+                    opacity: 0,
+                    x: '-100%',
+                    y: '100%',
+                    zIndex: 2,
+                  });
+              
+                  gsap.to(img, {
+                    opacity: 1,
+                    x: '0%',
+                    y: '0%',
+                    duration: 1,
+                    ease: 'power3.out',
+                  });
+              
+                  img.classList.add('active');
+                }
+              
+                function hideImage(index) {
+                  const img = images[index];
+              
+                  gsap.to(img, {
+                    opacity: 0,
+                    x: '-100%',
+                    y: '100%',
+                    duration: 1,
+                    ease: 'power3.in',
+                    onComplete: () => {
+                      img.classList.remove('active');
+                      gsap.set(img, { zIndex: 1 }); // send it back behind the new image
+                    }
+                  });
+                }
+              
+                textBlocks.forEach((block, index) => {
+                  ScrollTrigger.create({
+                    trigger: block,
+                    start: 'top center',
+                    end: 'bottom center',
+                    onEnter: () => showImage(index),
+                    onLeaveBack: () => hideImage(index),
+                  });
+                });
+              </script>
+              
+              
+        </section>
         <section class="page-width" id="home-section-5">
             <link rel="stylesheet" href="Styles/home-section-5.css">
             <div class="home-section-5-left-container">
