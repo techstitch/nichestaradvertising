@@ -34,34 +34,35 @@
     left: 0;
     transform: translate(-50%, -50%);
     background: #fff;
-    padding: 18px;
+    padding: 30px;
     border-radius: 440px;
     aspect-ratio: 1 / 1;
     height: auto;
     width: 30px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: width 0.3s ease-in, padding 0.3s ease-in;
     z-index: 2;
 }
 
 #clients_switch_button:hover {
     width: 40px;
-    padding: 8px;
-    transition: all 0.3s ease-in-out;
+    padding: 20px;
+    transition: width 0.3s ease-in, padding 0.3s ease-in;
 }
 
 .home-section-5-left-container h2 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin: 0;
     color: #fff;
     width: 75%;
+    font-weight: 600;
 }
 
 .home-section-5-left-container p {
     margin: 0;
     font-size: 1rem;
     line-height: 1.6rem;
-    font-weight: 300;
+    font-weight: 400;
     width: 75%;
     color: #fff;
 }

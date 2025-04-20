@@ -18,8 +18,12 @@
     margin-bottom: 4rem;
 }
 
-.portfolio-div {
+.section-6-inner a {
     width: calc(50% - 5px);
+}
+
+.portfolio-div {
+    width: 100%;
     overflow: hidden;
     aspect-ratio: 589 / 370;
     height: auto;
@@ -100,6 +104,11 @@
     bottom: calc(50% - 55px);
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in;
+    color: #fff;
+    width: max-content;
+    text-align: center;
+    max-width: 90%;
     transition: all 0.3s ease-in;
 }
 

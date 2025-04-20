@@ -78,10 +78,11 @@ button {
     white-space: nowrap;
     width: 100%;
     padding: 1rem 0;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
-.carousel-track, .carousel-track-2 {
+.carousel-track,
+.carousel-track-2 {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -91,11 +92,12 @@ button {
 .carousel-item {
     color: #000;
     font-family: 'ClashDisplay', sans-serif;
-    font-size: 1rem;
+    font-size: 1.3rem;
     white-space: nowrap;
+    font-weight: 500;
 }
 
 .carousel-separator {
-    width: 1.5rem;
+    width: 1.8rem;
     height: auto;
 }

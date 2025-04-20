@@ -24,6 +24,9 @@
     gap: 15px;
     flex-direction: column;
 }
+.home-section-3-inner p{
+    margin-bottom: 0;
+}
 
 #home-section-3 .home-section-3-inner img {
     width: 70px;
