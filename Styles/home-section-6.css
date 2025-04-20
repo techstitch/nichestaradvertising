@@ -100,7 +100,7 @@
 
 .portfolio-div:hover h3 {
     background: transparent;
-    font-size: 2.5rem;
+    font-size: 2rem;
     bottom: calc(50% - 55px);
     left: 50%;
     transform: translate(-50%, -50%);
@@ -110,6 +110,7 @@
     text-align: center;
     max-width: 90%;
     transition: all 0.3s ease-in;
+    text-wrap: nowrap;
 }
 
 .portfolio-div:hover img:first-of-type {
