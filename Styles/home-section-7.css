@@ -45,7 +45,11 @@
 .home-section-7-container-heading {
     font-size: 1.6rem;
     font-weight: 500;
-    margin: 0 0 4rem;
+    line-height: 3rem;
+    margin: 0;
+    padding: 0 12px;
+    background-color: #BE1E28;
+    color: #fff;
 }
 
 .home-section-7-container-subheading {
@@ -57,4 +61,18 @@
 
 .home-section-7-container-content {
     font-size: 1.15rem;
+}
+
+.home-section-7-container-heading-container {
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.home-section-7-container-heading-container img {
+    width: 48px;
+    aspect-ratio: unset !important;
+    height: unset !important;
+    margin: unset;
+    border-radius: 0 !important;
+    margin-right: -2px;
 }

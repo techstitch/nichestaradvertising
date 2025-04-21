@@ -1,5 +1,8 @@
-footer {
+footer{
     background-color: #BE1E28;
+
+}
+footer .page-width {
     height: 440px;
     position: relative;
     display: flex;

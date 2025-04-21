@@ -1,6 +1,6 @@
 #home-section-4 {
     display: flex;
-    background: #BE1E28;
+    background: #000;
     justify-content: center;
     align-items: center;
 }
@@ -10,7 +10,7 @@
     height: fit-content;
     width: 100%;
     position: relative;
-    padding-top: 150px;
+    padding-top: 120px;
 }
 
 .home-section-4-left {
@@ -50,17 +50,22 @@
 
 .home-section-4-right {
     width: 50%;
-    padding: 10rem 5rem;
+    padding: 6rem 5rem 10rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20rem;
+    gap: 3rem;
+    align-items: center;
     color: white;
 }
-
+.our-process-image-dots{
+    width: 5px;
+    height: auto;
+}
 .home-section-4-text-block {
     font-size: 2rem;
     font-weight: 400;
+    text-align: center;
 }
 
 .section-4-heading {
@@ -75,11 +80,12 @@
     font-size: 1.5rem;
     color: #fff;
     font-weight: 300;
+    margin-bottom: 0;
 }
 .home-section-4-heading{
     font-size: 4.4rem;
     font-weight: 600;
-    color: #fff;
+    color: #BE1E28;
     margin: 0;
     line-height: 4.5rem;
     text-align: center;
