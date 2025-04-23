@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Niche Star Advertising | Home</title>
+        <link rel="stylesheet" href="Styles/main.css">
+        <link rel="stylesheet" href="Styles/header.css">
+        <link rel="stylesheet" href="Styles/footer.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+        <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+        <link rel="icon" type="image/png" href="Assets/Logo.svg">
+    </head>
+    <body>
+        <header class="page-width" id="header">
+            <script>
+                fetch('Snippets/header.html')
+                    .then(res => res.text())
+                    .then(data => {
+                      document.getElementById('header').innerHTML = data;
+                });
+            </script>
+        </header>
+        <footer id="footer">
+            <script>
+                fetch('Snippets/footer.html')
+                    .then(res => res.text())
+                    .then(data => {
+                      document.getElementById('footer').innerHTML = data;
+                });
+            </script>
+        </footer>
+
+        <!--Whatsapp Button Script-->
+        <script>
+          window.addEventListener("load", () => {
+            const btn = document.querySelector(".whatsapp-floating-button");
+        
+            // Start 5 seconds after load
+            gsap.delayedCall(3, () => {
+              // Optional: animate it in (e.g., fade + scale)
+              gsap.fromTo(btn, { autoAlpha: 0, scale: 0 }, { duration: 1, autoAlpha: 1, scale: 1, ease: "back.out(1.7)" });
+        
+              // Floating animation loop
+              gsap.to(btn, {
+                y: -10,
+                duration: 1.5,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+              });
+            });
+          });
+        </script>
+    </body>
+</html>

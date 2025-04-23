@@ -553,7 +553,7 @@
             <div class="home-section-7-container-1">
                 <div class="home-section-7-container-left">
                   <div class="home-section-7-container-heading-container">
-                    <img src="Assets/Logo.svg">
+                    <!--<img src="Assets/Logo.svg">-->
                     <p class="home-section-7-container-heading">OUR COMMITMENT</p>
                   </div>
                     <p class="home-section-7-container-subheading">Sustainability at the Core of Every Creation</p>
@@ -567,7 +567,7 @@
                 <img src="Assets/Mask group (1).png">
                 <div class="home-section-7-container-left">
                   <div class="home-section-7-container-heading-container">
-                    <img src="Assets/Logo.svg">
+                    <!--<img src="Assets/Logo.svg">-->
                     <p class="home-section-7-container-heading">OUR PROMISE</p>
                   </div>
                     <p class="home-section-7-container-subheading">Turning Brand Visions into Powerful Experiences
@@ -748,10 +748,55 @@
               </script>
               
               
-        </section>
-        <a class="whatsapp-floating-button" href="">
-          <img src="Assets/—Pngtree—whatsapp mobile software icon_8704828.png" alt="WhatsApp">
-        </a><script>
+        </section>        
+        <footer id="footer">
+            <script>
+                fetch('Snippets/footer.html')
+                    .then(res => res.text())
+                    .then(data => {
+                      document.getElementById('footer').innerHTML = data;
+                });
+            </script>
+        </footer>
+        <!--Section 1 Script-->
+        <script>
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.fromTo(
+        ".home-section-1-right-div img:last-of-type",
+        {
+          x: -120,
+          y: 80,
+          rotation: -10,
+          opacity: 0
+        },
+        {
+          x: 300,
+          y: 0,
+          rotation: 0,
+          opacity: 1,
+          ease: "expo.out",
+          scrollTrigger: {
+            trigger: ".home-section-1-right-div",
+            start: "top bottom",  
+            end: "top 60%",    
+            scrub: true
+          }
+        }
+      );
+      gsap.to(".home-section-1-right-div img:last-of-type", {
+        x: 100,
+        y: -240,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: ".home-section-1-right-div",
+          start: "top 60%",    
+          end: "bottom top",  
+          scrub: true
+        }
+      });
+        </script>
+        <!--Whatsapp Button Script-->
+        <script>
           window.addEventListener("load", () => {
             const btn = document.querySelector(".whatsapp-floating-button");
         
@@ -771,51 +816,5 @@
             });
           });
         </script>
-        
-        <footer id="footer">
-            <script>
-                fetch('Snippets/footer.html')
-                    .then(res => res.text())
-                    .then(data => {
-                      document.getElementById('footer').innerHTML = data;
-                });
-            </script>
-        </footer>
     </body>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.fromTo(
-          ".home-section-1-right-div img:last-of-type",
-          {
-            x: -120,
-            y: 80,
-            rotation: -10,
-            opacity: 0
-          },
-          {
-            x: 300,
-            y: 0,
-            rotation: 0,
-            opacity: 1,
-            ease: "expo.out",
-            scrollTrigger: {
-              trigger: ".home-section-1-right-div",
-              start: "top bottom",  
-              end: "top 60%",    
-              scrub: true
-            }
-          }
-        );
-        gsap.to(".home-section-1-right-div img:last-of-type", {
-          x: 100,
-          y: -240,
-          ease: "power1.out",
-          scrollTrigger: {
-            trigger: ".home-section-1-right-div",
-            start: "top 60%",    
-            end: "bottom top",  
-            scrub: true
-          }
-        });
-    </script>
 </html>
