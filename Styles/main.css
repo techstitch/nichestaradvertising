@@ -2,6 +2,7 @@ body {
     background-color: #fff;
     margin: 0;
     overflow-x: hidden;
+    letter-spacing: 1px;
 }
 
 @font-face {
@@ -115,8 +116,64 @@ button {
     aspect-ratio: 1/1;
     height: auto;
     opacity: 0;
-  }
-  
-.whatsapp-floating-button img{
+}
+
+.whatsapp-floating-button img {
     width: 100%;
+}
+
+.page-top-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin: 70px 0;
+}
+
+.page-heading {
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    margin: 0;
+    cursor: unset;
+    height: fit-content;
+    background: #BE1E28;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    text-wrap: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.page-heading:hover {
+    color: #fff;
+    background: #000;
+    transition: all 0.3s ease-in;
+}
+
+.page-subheading {
+    font-weight: 700;
+    font-size: 3.7rem;
+    line-height: 4.5rem;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+.page-subheading:hover {
+    color: #BE1E28;
+    transition: all 0.3s ease-in;
+}
+
+#page-transition-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+#page-content {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    will-change: transform, opacity;
 }

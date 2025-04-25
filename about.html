@@ -1,60 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Niche Star Advertising | Home</title>
-        <link rel="stylesheet" href="Styles/main.css">
-        <link rel="stylesheet" href="Styles/header.css">
-        <link rel="stylesheet" href="Styles/footer.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-        <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
-        <link rel="icon" type="image/png" href="Assets/Logo.svg">
-    </head>
-    <body>
-        <header class="page-width" id="header">
-            <script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/header.css">
+    <link rel="stylesheet" href="Styles/footer.css">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+    <link rel="icon" type="image/png" href="Assets/Logo.svg">
+  </head>
+  <body>
+    <header class="page-width" id="header">
+      <script>
                 fetch('Snippets/header.html')
                     .then(res => res.text())
                     .then(data => {
                       document.getElementById('header').innerHTML = data;
                 });
             </script>
-        </header>
-        <footer id="footer">
-            <script>
-                fetch('Snippets/footer.html')
-                    .then(res => res.text())
-                    .then(data => {
-                      document.getElementById('footer').innerHTML = data;
-                });
-            </script>
-        </footer>
+    </header>
+    <section class="page-width">
+      <div class="page-top-container">
+        <p class="page-heading">About Us</p>
+        <p class="page-subheading">Pushing the boundaries of brand impact
+          through unforgettable events & experiences</p>
+      </div>
+    </section>
+    <section class="page-width" id="about-section-2">
+      <link rel="stylesheet" href="Styles/home-section-2.css">
+      <div class="video-wrapper">
+        <video autoplay muted loop playsinline class="home-section-2-video"
+          id="videoModal" data-fancybox="video">
+          <source src="Assets/Niche Star Copy 01 (1).mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
 
-        <!--Whatsapp Button Script-->
-        <script>
-          window.addEventListener("load", () => {
-            const btn = document.querySelector(".whatsapp-floating-button");
-        
-            // Start 5 seconds after load
-            gsap.delayedCall(3, () => {
-              // Optional: animate it in (e.g., fade + scale)
-              gsap.fromTo(btn, { autoAlpha: 0, scale: 0 }, { duration: 1, autoAlpha: 1, scale: 1, ease: "back.out(1.7)" });
-        
-              // Floating animation loop
-              gsap.to(btn, {
-                y: -10,
-                duration: 1.5,
-                repeat: -1,
-                yoyo: true,
-                ease: "power1.inOut"
+      </div>
+      <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
+
+      <script>
+          // Initialize FancyBox for video elements
+          $('[data-fancybox="video"]').fancybox({
+              type: 'video',  // Ensure the content type is 'video'
+              buttons: [
+                  "play",  // Play button
+                  "fullScreen",  // Fullscreen button
+                  "close",  // Close button
+                  "volume",  // Volume control button
+                  "download"  // Optional download button
+              ],
+              // Add this setting to prevent reloading of the video when closing the modal
+              onClose: function () {
+                  var video = $('#videoModal')[0];
+                  video.pause();  // Pause the video when closing
+                  video.currentTime = 0;  // Reset the video time to the beginning
+      
+                  // Ensure the video is shown again after closing the modal
+                  $('#videoModal').css('display', 'block');
+              },
+              // Prevent reloading the video when opening the modal again
+              afterLoad: function (current, previous, event) {
+                  var video = $(current.src)[0];
+                  if (video) {
+                      video.play();  // Play video automatically when modal is opened
+                  }
+                  // Add controls to the video when it's in the FancyBox modal
+                  $('#videoModal').prop('controls', true);  // Enable controls when the modal is opened
+              },
+              // Ensure that the video is visible after closing the modal
+              afterClose: function () {
+                  $('#videoModal').css('display', 'block');  // Show the video again after closing the modal
+                  // Remove controls when returning to the page view
+                  $('#videoModal').prop('controls', false);  // Remove controls when the modal is closed
+              }
+          });
+      </script>
+    </section>
+    <section class="page-width" id="about-section-3">
+      <link rel="stylesheet" href="Styles/about-section-3.css">
+      <div class="about-why-choose-us-container">
+        <p class="about-why-choose-us-heading">Why Choose Us?</p>
+        <p class="about-why-choose-us-subheading">Niche Star Advertising
+          specializes in large-scale printing and signage and many more services
+          offer a range of services related to visual communication and
+          branding. Here are some key points that highlight the significance of
+          us</p>
+        <div class="about-why-choose-us-container-inner">
+          <div class="timeline-carousel">
+            <div class="timeline-years">
+              <div class="timeline-years-track">
+                <div class="year-tab" data-index="0">Individual Approach</div>
+                <div class="year-tab active" data-index="1">Project
+                  Management</div>
+                <div class="year-tab" data-index="2">Customer Service</div>
+              </div>
+            </div>
+
+            <div class="timeline-content">
+              <div class="nav-arrows">
+                <svg id="prevBtn" xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" fill="none" style="&#10;">
+                  <path d="M104 61C107.314 61 110 58.3137 110 55C110 51.6863 107.314 49 104 49V61ZM1.75736 50.7574C-0.585789 53.1005 -0.585789 56.8995 1.75736 59.2426L39.9411 97.4264C42.2843 99.7696 46.0833 99.7696 48.4264 97.4264C50.7695 95.0833 50.7695 91.2843 48.4264 88.9411L14.4853 55L48.4264 21.0589C50.7695 18.7157 50.7695 14.9167 48.4264 12.5736C46.0833 10.2304 42.2843 10.2304 39.9411 12.5736L1.75736 50.7574ZM104 55V49H6V55V61H104V55Z" fill="currentColor"/>
+                  </svg>
+                <svg id="nextBtn"  xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" fill="none">
+                  <path d="M6 49C2.68629 49 0 51.6863 0 55C0 58.3137 2.68629 61 6 61V49ZM108.243 59.2426C110.586 56.8995 110.586 53.1005 108.243 50.7574L70.0589 12.5736C67.7157 10.2304 63.9167 10.2304 61.5736 12.5736C59.2305 14.9167 59.2305 18.7157 61.5736 21.0589L95.5147 55L61.5736 88.9411C59.2305 91.2843 59.2305 95.0833 61.5736 97.4264C63.9167 99.7696 67.7157 99.7696 70.0589 97.4264L108.243 59.2426ZM6 55V61H104V55V49H6V55Z" fill="currentColor"/>
+                </svg>
+              </div>
+
+              <div class="year-details">
+                <div class="year-detail active">
+                  <h2>Individual Approach Heading</h2>
+                  <p>We have the ability to offer customization and
+                    personalization options for printed materials and signage.
+                    We can incorporate specific designs, images, or messages
+                    requested by clients, tailoring the visuals to suit their
+                    unique needs and preferences.</p>
+                </div>
+                <div class="year-detail">
+                  <h2>Project Management Heading</h2>
+                  <p>We possess high project management capabilities. We can
+                    oversee the entire process, from initial design concepts to
+                    production and installation. This allows businesses to rely
+                    on our expertise and ensure that projects are completed
+                    efficiently and on time.</p>
+                </div>
+                <div class="year-detail">
+                  <h2>Customer Service Heading</h2>
+                  <p>We Emphasize our commitment by providing exceptional
+                    customer service. We Demonstrate a client-centric approach
+                    that will differentiate our company and foster trust and
+                    long-term relationships.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            const tabs = document.querySelectorAll('.year-tab');
+            const details = document.querySelectorAll('.year-detail');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const track = document.querySelector('.timeline-years-track');
+          
+            let currentIndex = 0;
+            const tabHeight = 80;
+          
+            function updateTabs(index) {
+              tabs.forEach(tab => tab.classList.remove('active'));
+              tabs[index].classList.add('active');
+          
+              details.forEach((detail, i) => {
+                if (i === index) {
+                  detail.classList.add('active');
+                  gsap.fromTo(detail,
+                    { opacity: 0, y: 20 },
+                    {
+                      opacity: 1,
+                      y: 0,
+                      duration: 0.5,
+                      ease: "power2.out",
+                      onStart: () => {
+                        detail.style.zIndex = 1;
+                      },
+                    }
+                  );
+                } else {
+                  gsap.to(detail, {
+                    opacity: 0,
+                    duration: 0.4,
+                    ease: "power1.inOut",
+                    onComplete: () => {
+                      detail.classList.remove('active');
+                      detail.style.zIndex = 0;
+                    }
+                  });
+                }
+              });
+          
+              gsap.to(track, {
+                y: -(index * tabHeight - tabHeight),
+                duration: 0.4,
+                ease: "back.out(1.7)"
+              });
+          
+              currentIndex = index;
+            }
+          
+            tabs.forEach(tab => {
+              tab.addEventListener('click', () => {
+                const newIndex = +tab.dataset.index;
+                if (newIndex !== currentIndex) {
+                  updateTabs(newIndex);
+                }
               });
             });
+          
+            prevBtn.addEventListener('click', () => {
+              currentIndex = (currentIndex === 0) ? tabs.length - 1 : currentIndex - 1;
+              updateTabs(currentIndex);
+            });
+          
+            nextBtn.addEventListener('click', () => {
+              currentIndex = (currentIndex === tabs.length - 1) ? 0 : currentIndex + 1;
+              updateTabs(currentIndex);
+            });
+          
+            updateTabs(currentIndex); // Initial render
+          </script>
+          
+
+        </div>
+      </div>
+    </section>
+    <section class="page-width" id="about-who-we-are">
+      <link rel="stylesheet" href="Styles/about-who-we-are.css">
+      <img class="about-who-we-are-top-image" src="Assets/Group 46.png">
+      <div class="about-who-we-are-inner">
+        <div class="about-who-we-are-inner-left">
+          <p class="about-who-we-are-heading">We are Niche Star Advertising Agency</p>
+          <p class="about-who-we-are-subheading">Niche Star Advertising is a comprehensive production wing of Niche Marketing Management to produce all types of POS material for brands for traditional Advertising, events, Visual Merchandising and Fabrication, and Retail POP up display solutions. Our journey began in 2022, fueled by ambitious aspirations and an unwavering can-do attitude. Today, our innovative strategies, creative wizardry, cutting-edge technology, and state-of-the-art equipment harmoniously converge within the expansive confines of Niche Star Advertising’s 4000 sq ft production facility.</p>    
+        </div>
+        <div class="about-who-we-are-inner-right">
+          <div class="about-who-we-are-inner-right-accordion">
+            <div class="about-who-we-are-inner-right-item">
+              <div class="about-who-we-are-inner-right-header">
+                <h3>Premium Quality</h3>
+                <div class="about-who-we-are-inner-right-icon">+</div>
+              </div>
+              <div class="about-who-we-are-inner-right-content">
+                <p>We possess specialized equipment and expertise in large-format printing, allowing us to produce high-quality prints on a large scale. We can create banners, posters, billboards, vehicle wraps, wall graphics, Signages, and other visually impactful materials.</p>
+              </div>
+            </div>
+            <div class="about-who-we-are-inner-right-item">
+              <div class="about-who-we-are-inner-right-header">
+                <h3>Branding and Visual Identity</h3>
+                <div class="about-who-we-are-inner-right-icon">+</div>
+              </div>
+              <div class="about-who-we-are-inner-right-content">
+                <p>We help businesses create a consistent and cohesive visual identity through their printing and signage services. We work closely with clients to understand their brand guidelines, colors, and fonts, ensuring that all printed materials and signage align with the brand’s visual identity.</p>
+              </div>
+            </div>
+            <div class="about-who-we-are-inner-right-item">
+              <div class="about-who-we-are-inner-right-header">
+                <h3>Free Consultations</h3>
+                <div class="about-who-we-are-inner-right-icon">+</div>
+              </div>
+              <div class="about-who-we-are-inner-right-content">
+                <p>We understand the technical aspects of printing, material selection, and installation techniques, allowing us to provide expert advice and recommendations to our clients.</p>
+              </div>
+            </div>
+            <div class="about-who-we-are-inner-right-item">
+              <div class="about-who-we-are-inner-right-header">
+                <h3>Quality Control and Assurance</h3>
+                <div class="about-who-we-are-inner-right-icon">+</div>
+              </div>
+              <div class="about-who-we-are-inner-right-content">
+                <p>We prioritize quality control and assurance to deliver exceptional results. We have stringent quality checks in place to ensure that the printed materials and signage meet high standards in terms of color accuracy, resolution, durability, and overall finish.</p>
+              </div>
+            </div>
+            <div class="about-who-we-are-inner-right-item">
+              <div class="about-who-we-are-inner-right-header">
+                <h3>Experienced Team</h3>
+                <div class="about-who-we-are-inner-right-icon">+</div>
+              </div>
+              <div class="about-who-we-are-inner-right-content">
+                <p>We specialize in large-scale printing and signage, offering in-depth knowledge and industry experience. Niche Star is able to provide our clients with professional guidance and recommendations since we are knowledgeable about the technical aspects of printing, material selection, and installation methods.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        document.querySelectorAll('.about-who-we-are-inner-right-header').forEach((header, index) => {
+          const icon = header.querySelector('.about-who-we-are-inner-right-icon');
+          const content = header.nextElementSibling;
+          let isOpen = false;
+      
+          // Default: close all
+          gsap.set(content, { height: 0, opacity: 0 });
+      
+          // Open first by default
+          if (index === 0) {
+            gsap.set(icon, { rotate: 45 });
+            gsap.set(content, { height: 'auto', opacity: 1 });
+            isOpen = true;
+          }
+      
+          header.addEventListener('click', () => {
+            const allHeaders = document.querySelectorAll('.about-who-we-are-inner-right-header');
+      
+            allHeaders.forEach(h => {
+              const i = h.querySelector('.about-who-we-are-inner-right-icon');
+              const c = h.nextElementSibling;
+      
+              if (h !== header) {
+                gsap.to(i, { rotate: 0, duration: 0.3 });
+                gsap.to(c, { height: 0, opacity: 0, duration: 0.4, ease: "power2.inOut" });
+                h.isOpen = false;
+              }
+            });
+      
+            if (!isOpen) {
+              gsap.to(icon, { rotate: 45, duration: 0.3 });
+              gsap.to(content, { height: "auto", opacity: 1, duration: 0.5, ease: "power2.inOut" });
+            } else {
+              gsap.to(icon, { rotate: 0, duration: 0.3 });
+              gsap.to(content, { height: 0, opacity: 0, duration: 0.4, ease: "power2.inOut" });
+            }
+      
+            isOpen = !isOpen;
           });
-        </script>
-    </body>
+        });
+      </script>          
+    </section>
+    <section class="page-width" id="home-section-7">
+    <link rel="stylesheet" href="Styles/home-section-7.css">
+    <div class="home-section-7-container-1">
+        <div class="home-section-7-container-left">
+          <div class="home-section-7-container-heading-container">
+            <!--<img src="Assets/Logo.svg">-->
+            <p class="home-section-7-container-heading">OUR COMMITMENT</p>
+          </div>
+            <p class="home-section-7-container-subheading">Sustainability at the Core of Every Creation</p>
+            <p class="home-section-7-container-content">At Niche Star, sustainability isn’t just a choice — it’s a responsibility. From material selection to stand design, we embed eco-conscious thinking into every project, creating exhibition spaces that leave lasting impressions, not footprints.
+              As the first Tier 5 ESSA Sustainability Accredited Stand Builder, we’re committed to redefining exhibitions with net-zero solutions and environmentally responsible materials, helping shape a future where creativity and sustainability go hand in hand.
+            </p>
+        </div>
+        <img src="Assets/WhatsApp Image 2024-06-29 at 22.45.23_959283bb 1.png">
+    </div>
+    <div class="home-section-7-container-2">
+        <img src="Assets/Mask group (1).png">
+        <div class="home-section-7-container-left">
+          <div class="home-section-7-container-heading-container">
+            <!--<img src="Assets/Logo.svg">-->
+            <p class="home-section-7-container-heading">OUR PROMISE</p>
+          </div>
+            <p class="home-section-7-container-subheading">Turning Brand Visions into Powerful Experiences
+            </p>
+            <p class="home-section-7-container-content">
+              We believe great design doesn’t just fill a space — it creates an experience. Our commitment is to go beyond the expected, delivering spaces and displays that inspire, connect, and convert.
+              <br><br>
+              Every brand has a story, and we consider it our mission to bring yours to life through thoughtful, immersive design. Whether it's an exhibition stand, retail display, or brand activation, we work closely with you at every step to ensure that your vision is translated into a compelling physical environment.
+            </p>
+                                </p>
+        </div>
+    </div>
+    </section>
+    <section class="page-width" id="home-section-5">
+  <link rel="stylesheet" href="Styles/home-section-5.css">
+  <div class="home-section-5-left-container">
+      <h2>Our Clients</h2>
+      <p>We approach every project with passion, precision, and a commitment to excellence. Proud partners to some of the industry’s most trusted and recognizable brands.
+        </p>
+      </p>
+  </div>
+  <div class="home-section-5-right-container">
+      <img id="clients_switch_button"
+          src="Assets/uuid-d757d682-943d-49fd-b438-0061a5d758e1.svg">
+      <ul>
+          <li class="active">
+              <img src="Assets/White-Amazon-Logo-PNG-HD-Quality.png">
+          </li>
+          <li class="active">
+            <img src="Assets/White-Amazon-Logo-PNG-HD-Quality.png">
+          </li>
+          <li class="active">
+            <img src="Assets/White-Amazon-Logo-PNG-HD-Quality.png">
+          </li>
+          <li class="active">
+            <img src="Assets/White-Amazon-Logo-PNG-HD-Quality.png">
+          </li>
+          <li class="active">
+            <img src="Assets/White-Amazon-Logo-PNG-HD-Quality.png">
+          </li>
+          <li class="active">
+            <img src="Assets/White-Amazon-Logo-PNG-HD-Quality.png">
+          </li>
+          <li>
+            <img src="Assets/[CITYPNG.COM]Flipkart White Logo Download PNG - 5000x5000.png">
+          </li>
+          <li>
+            <img src="Assets/[CITYPNG.COM]Flipkart White Logo Download PNG - 5000x5000.png">
+          </li>
+          <li>
+            <img src="Assets/[CITYPNG.COM]Flipkart White Logo Download PNG - 5000x5000.png">
+          </li>
+          <li>
+            <img src="Assets/[CITYPNG.COM]Flipkart White Logo Download PNG - 5000x5000.png">
+          </li>
+          <li>
+            <img src="Assets/[CITYPNG.COM]Flipkart White Logo Download PNG - 5000x5000.png">
+          </li>
+          <li>
+            <img src="Assets/[CITYPNG.COM]Flipkart White Logo Download PNG - 5000x5000.png">
+          </li>
+      </ul>
+  </div>
+  <script>
+    gsap.registerPlugin(ModifiersPlugin); // Add this if not already registered
+  
+    const switchButton = document.getElementById('clients_switch_button');
+    const listItems = document.querySelectorAll('#home-section-5 ul li');
+  
+    let showingFirstSet = true;
+    let isAnimating = false;
+    let rotationCount = 0;
+  
+    switchButton.addEventListener('click', async () => {
+      if (isAnimating) return;
+      isAnimating = true;
+  
+      // ✅ Update rotation count
+      rotationCount += 360;
+  
+      // ✅ Force full, smooth rotation (no reset)
+      gsap.to(switchButton, {
+        rotation: rotationCount,
+        duration: 0.6,
+        ease: "power2.inOut"
+      });
+  
+      const visibleSet = showingFirstSet ? [...listItems].slice(0, 6) : [...listItems].slice(6);
+      const hiddenSet = showingFirstSet ? [...listItems].slice(6) : [...listItems].slice(0, 6);
+  
+      // Animate old items out
+      await gsap.to(visibleSet, {
+        y: -20,
+        opacity: 0,
+        stagger: 0.05,
+        duration: 0.3
+      });
+  
+      // Switch visible sets
+      visibleSet.forEach(item => item.classList.remove('active'));
+      hiddenSet.forEach(item => item.classList.add('active'));
+  
+      // Animate new set in
+      await gsap.fromTo(hiddenSet,
+        { y: 20, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+          duration: 0.4,
+          ease: "power2.out"
+        }
+      );
+  
+      showingFirstSet = !showingFirstSet;
+      isAnimating = false;
+    });
+  </script>
+  
+  
+    </section>
+    <a href="services.html" class="about-view-more-services-btn">View More</a href="services.html">
+    <footer id="footer">
+      <script>
+        fetch('Snippets/footer.html')
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById('footer').innerHTML = data;
+    
+            // Keep checking for the button until it appears
+            const interval = setInterval(() => {
+              const btn = document.querySelector(".whatsapp-floating-button");
+              if (btn) {
+                clearInterval(interval);
+    
+                // Animate after 3 seconds
+                gsap.delayedCall(3, () => {
+                  gsap.fromTo(btn, { autoAlpha: 0, scale: 0 }, { duration: 1, autoAlpha: 1, scale: 1, ease: "back.out(1.7)" });
+    
+                  gsap.to(btn, {
+                    y: -10,
+                    duration: 1.5,
+                    repeat: -1,
+                    yoyo: true,
+                    ease: "power1.inOut"
+                  });
+                });
+              }
+            }, 100); // check every 100ms
+          });
+      </script>
+    </footer>
+  </body>
 </html>

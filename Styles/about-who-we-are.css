@@ -1,0 +1,108 @@
+#about-who-we-are {
+    margin-bottom: 4rem;
+}
+
+.about-who-we-are-heading {
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    margin: 0;
+    align-self: flex-start;
+    height: fit-content;
+    background: #BE1E28;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    text-wrap: nowrap;
+    transition: all 0.3s ease-in;
+    width: fit-content;
+}
+
+.about-who-we-are-subheading {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.about-who-we-are-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.about-who-we-are-inner-left {
+    width: 43%;
+    justify-content: start;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-who-we-are-inner-right {
+    display: flex;
+    flex-direction: column;
+    width: 52%;
+    font-family: 'ClashDisplay', sans-serif;
+}
+
+.about-who-we-are-inner-right-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-who-we-are-inner-right-item {
+    background: #BE1E28;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.about-who-we-are-inner-right-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+}
+
+.about-who-we-are-inner-right-header h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.about-who-we-are-inner-right-icon {
+    transition: transform 0.2s ease-out;
+    font-size: 1.4rem;
+    color: #000;
+    background: #fff;
+    padding: 10px;
+    font-weight: 500;
+    line-height: 0px;
+    display: flex;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-who-we-are-inner-right-content {
+    background: #000;
+    color: #fff;
+    padding: 0 20px;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+}
+
+.about-who-we-are-inner-right-content p {
+    color: #fff;
+}
+
+.about-who-we-are-top-image {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    margin-bottom: -3rem;
+}

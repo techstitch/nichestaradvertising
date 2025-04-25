@@ -67,35 +67,33 @@
     z-index: 1;
     gap: 40px;
     overflow: hidden;
-  }
-  
-  .home-section-8-testimonial::before {
+}
+
+.home-section-8-testimonial::before {
     content: "";
     position: absolute;
     inset: 0;
     border-radius: 15px;
     padding: 4px;
-    background: linear-gradient(
-      90deg,
-      #F4B400 0%,
-      #F4B400 25%,
-      #0F9D58 25%,
-      #0F9D58 50%,
-      #DB4437 50%,
-      #DB4437 75%,
-      #4285F4 75%,
-      #4285F4 100%
-    );
-    -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
+    background: linear-gradient(90deg,
+            #F4B400 0%,
+            #F4B400 25%,
+            #0F9D58 25%,
+            #0F9D58 50%,
+            #DB4437 50%,
+            #DB4437 75%,
+            #4285F4 75%,
+            #4285F4 100%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     z-index: -1;
     pointer-events: none;
-  }
-  
-  
+}
+
+
 
 .home-section-8-testimonial-left,
 .home-section-8-testimonial-right {
@@ -142,4 +140,32 @@
     padding: .6rem 1.8rem;
     text-decoration: none;
     margin-top: 30px;
+}
+
+.total-google-reviews-container {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.total-google-reviews-container img {
+    width: 40px;
+}
+
+.total-google-reviews-container div img {
+    width: 120px;
+}
+
+.total-google-reviews-container div p {
+    margin: 15px 0 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.total-google-reviews-container div {
+    border-left: solid 2px #000;
+    padding-left: 20px;
 }

@@ -28,10 +28,12 @@
     display: flex;
     gap: 32px;
     background: #000000;
-    padding: .8rem 2.5rem;
+    padding: 0 2.5rem;
     border-radius: 50px;
 }
-
+#header nav a{
+    padding: .8rem 0;
+}
 #header button {
     background-color: #BE1E28;
     color: #fff;
@@ -48,4 +50,46 @@
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease-in;
+}
+
+#header .dropdown {
+    position: relative;
+}
+
+#header .dropbtn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+#header .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    background-color: #000;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    min-width: 220px;
+    z-index: 1000;
+    padding: 0.5rem 0;
+}
+
+#header .dropdown-content a {
+    padding: 0.75rem 1.25rem;
+    color: #fff;
+    white-space: nowrap;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+#header .dropdown-content a:hover {
+    background-color: #BE1E28;
+    color: #fff;
+}
+
+#header .dropdown:hover .dropdown-content {
+    display: block;
 }

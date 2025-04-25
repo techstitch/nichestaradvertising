@@ -1,0 +1,194 @@
+#about-section-3 {
+    display: flex;
+    background-color: #000;
+    margin-bottom: 5rem;
+}
+
+.about-why-choose-us-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.about-why-choose-us-heading {
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    margin: 0;
+    align-self: flex-start;
+    cursor: unset;
+    height: fit-content;
+    background: #BE1E28;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 50px;
+    text-wrap: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.about-why-choose-us-subheading {
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+
+
+
+.timeline-carousel {
+    display: flex;
+    margin-top: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'ClashDisplay', sans-serif;
+}
+
+.timeline-years {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    width: 38%;
+    overflow: hidden;
+}
+
+.timeline-years::before,
+.timeline-years::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 90px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.timeline-years::before {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.timeline-years::after {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.timeline-years-track {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s ease;
+    will-change: transform;
+}
+
+.year-tab {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #be1e28;
+    cursor: pointer;
+    margin: 0;
+    transition: all 0.3s ease;
+    text-align: center;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.year-tab.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.timeline-content {
+    width: 58%;
+}
+
+.nav-arrows {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.nav-arrows svg {
+    width: 21px;
+    height: auto;
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-arrows svg:hover {
+    background: #be1e28;
+    color: #fff;
+}
+
+
+.year-details {
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+}
+
+.year-detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.year-detail.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.year-detail h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.year-detail p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.about-why-choose-us-container-inner {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-view-more-services-btn {
+    display: block;
+    margin: -1rem auto 4rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #BE1E28;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4.5rem;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+}
+
+.about-view-more-services-btn:hover {
+    background-color: #000;
+}

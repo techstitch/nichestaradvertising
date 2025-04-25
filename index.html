@@ -418,6 +418,7 @@
                 </div>
               </a>
             </div>
+            <a href="portfolio.html" class="view-more-portfolio-btn">View More</a>
         </section>
         <section class="page-width" id="home-section-videos">
           <link rel="stylesheet" href="Styles/home-section-videos.css">
@@ -669,7 +670,13 @@
           
               <img class="home-section-8-testimonial-right_arrow" src="Assets/right arrow.png" alt="Right">
             </div>
-            
+            <div class="total-google-reviews-container">
+              <img src="Assets/7123025_logo_google_g_icon 1.png">
+              <div>
+                <img src="Assets/Group 48.png">
+                <p>36 Reviews</p>
+              </div>
+            </div>
             <a class="leave-review-button">Leave a Review</a>
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
@@ -750,13 +757,34 @@
               
         </section>        
         <footer id="footer">
-            <script>
-                fetch('Snippets/footer.html')
-                    .then(res => res.text())
-                    .then(data => {
-                      document.getElementById('footer').innerHTML = data;
-                });
-            </script>
+          <script>
+            fetch('Snippets/footer.html')
+              .then(res => res.text())
+              .then(data => {
+                document.getElementById('footer').innerHTML = data;
+        
+                // Keep checking for the button until it appears
+                const interval = setInterval(() => {
+                  const btn = document.querySelector(".whatsapp-floating-button");
+                  if (btn) {
+                    clearInterval(interval);
+        
+                    // Animate after 3 seconds
+                    gsap.delayedCall(3, () => {
+                      gsap.fromTo(btn, { autoAlpha: 0, scale: 0 }, { duration: 1, autoAlpha: 1, scale: 1, ease: "back.out(1.7)" });
+        
+                      gsap.to(btn, {
+                        y: -10,
+                        duration: 1.5,
+                        repeat: -1,
+                        yoyo: true,
+                        ease: "power1.inOut"
+                      });
+                    });
+                  }
+                }, 100); // check every 100ms
+              });
+          </script>
         </footer>
         <!--Section 1 Script-->
         <script>
@@ -794,27 +822,6 @@
           scrub: true
         }
       });
-        </script>
-        <!--Whatsapp Button Script-->
-        <script>
-          window.addEventListener("load", () => {
-            const btn = document.querySelector(".whatsapp-floating-button");
-        
-            // Start 5 seconds after load
-            gsap.delayedCall(3, () => {
-              // Optional: animate it in (e.g., fade + scale)
-              gsap.fromTo(btn, { autoAlpha: 0, scale: 0 }, { duration: 1, autoAlpha: 1, scale: 1, ease: "back.out(1.7)" });
-        
-              // Floating animation loop
-              gsap.to(btn, {
-                y: -10,
-                duration: 1.5,
-                repeat: -1,
-                yoyo: true,
-                ease: "power1.inOut"
-              });
-            });
-          });
         </script>
     </body>
 </html>
