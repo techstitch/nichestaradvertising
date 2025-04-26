@@ -1,0 +1,28 @@
+.portfolio-section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ClashDisplay', sans-serif;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.portfolio-section-header li {
+    background-color: #BE1E2820;
+    text-decoration: none;
+    list-style: none;
+    text-wrap: nowrap;
+    padding: 20px;
+    border-radius: 55px;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+.portfolio-section-header li.active {
+    background-color: #BE1E28;
+    color: #fff;
+    transition: all .2s ease-out;
+}
+.portfolio-section-container .home-section-videos-inner-wrapper{
+    margin-top: 3rem;
+}

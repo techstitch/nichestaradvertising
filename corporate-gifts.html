@@ -21,45 +21,187 @@
         <link rel="icon" type="image/png" href="Assets/Logo.svg">
     </head>
     <body>
-        <header class="page-width" id="header">
-            <script>
-                fetch('Snippets/header.html')
-                    .then(res => res.text())
-                    .then(data => {
-                      document.getElementById('header').innerHTML = data;
-                });
-            </script>
-        </header>
-
-        <footer id="footer">
-            <script>
-              fetch('Snippets/footer.html')
-                .then(res => res.text())
-                .then(data => {
-                  document.getElementById('footer').innerHTML = data;
-          
-                  // Keep checking for the button until it appears
-                  const interval = setInterval(() => {
-                    const btn = document.querySelector(".whatsapp-floating-button");
-                    if (btn) {
-                      clearInterval(interval);
-          
-                      // Animate after 3 seconds
-                      gsap.delayedCall(3, () => {
-                        gsap.fromTo(btn, { autoAlpha: 0, scale: 0 }, { duration: 1, autoAlpha: 1, scale: 1, ease: "back.out(1.7)" });
-          
-                        gsap.to(btn, {
-                          y: -10,
-                          duration: 1.5,
-                          repeat: -1,
-                          yoyo: true,
-                          ease: "power1.inOut"
+      <header class="page-width" id="header">
+        <script>
+                  fetch('Snippets/header.html')
+                      .then(res => res.text())
+                      .then(data => {
+                        document.getElementById('header').innerHTML = data;
+                  });
+              </script>
+      </header>
+      <section class="page-width">
+        <div class="page-top-container">
+          <p class="page-heading">Corporate Gifts</p>
+          <p class="page-subheading">We print everything in-house—banners,
+            stickers, wallpaper, and vehicle branding.</p>
+        </div>
+      </section>
+      <section class="page-width" id="home-section-videos">
+        <link rel="stylesheet" href="Styles/home-section-videos.css">
+        <div class="home-section-videos-inner-wrapper">
+          <div class="home-section-videos-inner">
+            <div class="home-section-videos-card" data-video="Assets/Video-1.mp4">
+              <video preload="metadata" muted playsinline>
+                <source src="Assets/Video-1.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay">
+                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
+              </div>
+            </div>
+            <div class="home-section-videos-card">
+              <img class="home-section-videos-card-img"
+                src="Assets/printing-t-shirt-workshop_1016675-3173.jpg">
+            </div>
+            <div class="home-section-videos-card" data-video="Assets/Video-2.mp4">
+              <video preload="metadata" muted playsinline>
+                <source src="Assets/Video-2.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay">
+                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
+              </div>
+            </div>
+            <div class="home-section-videos-card" data-video="Assets/Video-3.mp4">
+              <video preload="metadata" muted playsinline>
+                <source src="Assets/Video-3.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay">
+                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
+              </div>
+            </div>
+            <div class="home-section-videos-card" data-video="Assets/Video-4.mp4">
+              <video preload="metadata" muted playsinline>
+                <source src="Assets/Video-4.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay">
+                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
+              </div>
+            </div>
+            <div class="home-section-videos-card" data-video="Assets/Video-9.mp4">
+              <video preload="metadata" muted playsinline>
+                <source src="Assets/Video-9.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay">
+                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
+              </div>
+            </div>
+            <div class="home-section-videos-card" data-video="Assets/Video-5.mp4">
+              <video preload="metadata" muted playsinline>
+                <source src="Assets/Video-5.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay">
+                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
+              </div>
+            </div>
+            <div class="home-section-videos-card" data-video="Assets/Video-6.mp4">
+              <video preload="metadata" muted playsinline>
+                <source src="Assets/Video-6.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay">
+                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
+              </div>
+            </div>
+            <div class="home-section-videos-card" data-video="Assets/Video-7.mp4">
+              <video preload="metadata" muted playsinline>
+                <source src="Assets/Video-7.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay">
+                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
+              </div>
+            </div>
+            <div class="home-section-videos-card" data-video="Assets/Video-8.mp4">
+              <video preload="metadata" muted playsinline>
+                <source src="Assets/Video-8.mp4" type="video/mp4">
+              </video>
+              <div class="video-overlay">
+                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="services.html" class="view-more-videos-btn">View more
+          Services</a>
+        <script>
+          const isMobile = window.innerWidth < 756;
+        
+          document.querySelectorAll('.home-section-videos-card').forEach(card => {
+            const video = card.querySelector('video');
+        
+            if (isMobile) {
+              // Keep popup functionality on mobile
+              card.addEventListener('click', () => {
+                const videoSrc = card.getAttribute('data-video');
+        
+                const instance = basicLightbox.create(`
+                  <div class="video-popup-wrapper">
+                    <video src="${videoSrc}" controls autoplay playsinline style="max-width: 90vw; max-height: 90vh; border-radius: 1rem;"></video>
+                  </div>
+                `);
+                instance.show();
+              });
+            } else {
+              // Hover play and unmute on desktop
+              card.addEventListener('mouseenter', () => {
+                video.currentTime = 0;
+                video.muted = false;
+                video.play();
+              });
+        
+              card.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0;
+                video.muted = true;
+              });
+            }
+          });
+        </script>
+  
+        <!-- <button class="view-more-videos-btn">View More</button>
+  
+        <script>
+          const wrapper = document.querySelector('.home-section-videos-inner-wrapper');
+          const viewMoreBtn = document.querySelector('.view-more-videos-btn');
+        
+          // Start collapsed
+          wrapper.classList.add('collapsed');
+        
+          viewMoreBtn.addEventListener('click', () => {
+            wrapper.classList.remove('collapsed');
+            viewMoreBtn.style.display = 'none';
+          });
+        </script>
+        -->
+  
+      </section>
+      <footer id="footer">
+        <script>
+                fetch('Snippets/footer.html')
+                  .then(res => res.text())
+                  .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+            
+                    // Keep checking for the button until it appears
+                    const interval = setInterval(() => {
+                      const btn = document.querySelector(".whatsapp-floating-button");
+                      if (btn) {
+                        clearInterval(interval);
+            
+                        // Animate after 3 seconds
+                        gsap.delayedCall(3, () => {
+                          gsap.fromTo(btn, { autoAlpha: 0, scale: 0 }, { duration: 1, autoAlpha: 1, scale: 1, ease: "back.out(1.7)" });
+            
+                          gsap.to(btn, {
+                            y: -10,
+                            duration: 1.5,
+                            repeat: -1,
+                            yoyo: true,
+                            ease: "power1.inOut"
+                          });
                         });
-                      });
-                    }
-                  }, 100); // check every 100ms
-                });
-            </script>
-        </footer>
+                      }
+                    }, 100); // check every 100ms
+                  });
+              </script>
+      </footer>
     </body>
 </html>

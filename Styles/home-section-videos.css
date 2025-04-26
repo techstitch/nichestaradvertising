@@ -19,6 +19,7 @@
     font-size: 1rem;
     cursor: pointer;
     border-radius: 4.5rem;
+    width: fit-content;
     transition: background-color 0.3s ease;
   }
   
@@ -51,7 +52,10 @@
     display: inline-block;
     width: 100%;
 }
-
+.home-section-videos-card-img{
+    width: 100%;
+    height: auto;
+}
 .home-section-videos-card:hover {
     transform: scale(1.02);
 }
