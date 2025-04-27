@@ -95,7 +95,8 @@
 }
 
 .contact-section-3 iframe {
-    width: calc(60% - 10px)
+    width: calc(60% - 10px);
+    border-radius: 15px;
 }
 
 .contact-section-3 ul {
@@ -110,17 +111,20 @@
     padding: 0 50px;
     list-style: none;
 }
-.contact-section-3 ul li{
+
+.contact-section-3 ul li {
     display: flex;
     gap: 10px;
     justify-content: center;
     align-items: center;
 }
-.contact-section-3 ul li img{
+
+.contact-section-3 ul li img {
     width: 35px;
     height: fit-content;
 }
-.contact-section-3 ul li p{
+
+.contact-section-3 ul li p {
     margin: 0;
     font-size: 1.1rem;
 }
