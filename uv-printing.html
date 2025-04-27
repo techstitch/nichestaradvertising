@@ -10,18 +10,16 @@
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
       async></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
-      async></script>
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"
-      async></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"
-      async></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
     <script
-      src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"
-      async></script>
+      src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
     <link rel="icon" type="image/png" href="Assets/Logo.svg">
   </head>
   <body>
@@ -31,10 +29,9 @@
           .then(res => res.text())
           .then(data => {
             document.getElementById('header').innerHTML = data;
-          });
+        });
       </script>
     </header>
-
     <section class="page-width">
       <div class="page-top-container">
         <p class="page-heading">UV Printing</p>
@@ -42,93 +39,90 @@
           stickers, wallpaper, and vehicle branding.</p>
       </div>
     </section>
-
     <section class="page-width" id="home-section-videos">
       <link rel="stylesheet" href="Styles/home-section-videos.css">
       <div class="home-section-videos-inner-wrapper">
         <div class="home-section-videos-inner">
-          <!-- Video 1 -->
           <div class="home-section-videos-card" data-video="Assets/Video-1.mp4">
-            <video class="lazyload" preload="none" muted playsinline
-              data-src="Assets/Video-1.mp4" data-sizes="auto">
-              <source src type="video/mp4">
+            <video class="lazyload" preload="metadata" muted playsinline
+              data-src="Assets/Video-1.mp4">
+              <source type="video/mp4">
             </video>
             <div class="video-overlay">
               <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
           </div>
-
-          <!-- Video 2 -->
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/printing-t-shirt-workshop_1016675-3173.jpg">
+          </div>
           <div class="home-section-videos-card" data-video="Assets/Video-2.mp4">
-            <video class="lazyload" preload="none" muted playsinline
-              data-src="Assets/Video-2.mp4" data-sizes="auto">
-              <source src type="video/mp4">
+            <video class="lazyload" preload="metadata" muted playsinline
+              data-src="Assets/Video-2.mp4">
+              <source type="video/mp4">
             </video>
             <div class="video-overlay">
               <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
           </div>
-
-          <!-- Video 3 -->
           <div class="home-section-videos-card" data-video="Assets/Video-3.mp4">
-            <video class="lazyload" preload="none" muted playsinline
-              data-src="Assets/Video-3.mp4" data-sizes="auto">
-              <source src type="video/mp4">
+            <video class="lazyload" preload="metadata" muted playsinline
+              data-src="Assets/Video-3.mp4">
+              <source type="video/mp4">
             </video>
             <div class="video-overlay">
               <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
           </div>
-
-          <!-- Video 4 -->
           <div class="home-section-videos-card" data-video="Assets/Video-4.mp4">
-            <video class="lazyload" preload="none" muted playsinline
-              data-src="Assets/Video-4.mp4" data-sizes="auto">
-              <source src type="video/mp4">
+            <video class="lazyload" preload="metadata" muted playsinline
+              data-src="Assets/Video-4.mp4">
+              <source type="video/mp4">
             </video>
             <div class="video-overlay">
               <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
           </div>
-
-          <!-- Video 5 -->
+          <div class="home-section-videos-card" data-video="Assets/Video-9.mp4">
+            <video class="lazyload" preload="metadata" muted playsinline
+              data-src="Assets/Video-9.mp4">
+              <source type="video/mp4">
+            </video>
+            <div class="video-overlay">
+              <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
+            </div>
+          </div>
           <div class="home-section-videos-card" data-video="Assets/Video-5.mp4">
-            <video class="lazyload" preload="none" muted playsinline
-              data-src="Assets/Video-5.mp4" data-sizes="auto">
-              <source src type="video/mp4">
+            <video class="lazyload" preload="metadata" muted playsinline
+              data-src="Assets/Video-5.mp4">
+              <source type="video/mp4">
             </video>
             <div class="video-overlay">
               <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
           </div>
-
-          <!-- Video 6 -->
           <div class="home-section-videos-card" data-video="Assets/Video-6.mp4">
-            <video class="lazyload" preload="none" muted playsinline
-              data-src="Assets/Video-6.mp4" data-sizes="auto">
-              <source src type="video/mp4">
+            <video class="lazyload" preload="metadata" muted playsinline
+              data-src="Assets/Video-6.mp4">
+              <source type="video/mp4">
             </video>
             <div class="video-overlay">
               <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
           </div>
-
-          <!-- Video 7 -->
           <div class="home-section-videos-card" data-video="Assets/Video-7.mp4">
-            <video class="lazyload" preload="none" muted playsinline
-              data-src="Assets/Video-7.mp4" data-sizes="auto">
-              <source src type="video/mp4">
+            <video class="lazyload" preload="metadata" muted playsinline
+              data-src="Assets/Video-7.mp4">
+              <source type="video/mp4">
             </video>
             <div class="video-overlay">
               <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
           </div>
-
-          <!-- Video 8 -->
           <div class="home-section-videos-card" data-video="Assets/Video-8.mp4">
-            <video class="lazyload" preload="none" muted playsinline
-              data-src="Assets/Video-8.mp4" data-sizes="auto">
-              <source src type="video/mp4">
+            <video class="lazyload" preload="metadata" muted playsinline
+              data-src="Assets/Video-8.mp4">
+              <source type="video/mp4">
             </video>
             <div class="video-overlay">
               <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
@@ -136,38 +130,22 @@
           </div>
         </div>
       </div>
-
       <a href="services.html" class="view-more-videos-btn">View more
         Services</a>
-
       <script>
         const isMobile = window.innerWidth < 756;
-
-        // Lazy loading with Intersection Observer
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const video = entry.target;
-              const videoSrc = video.getAttribute('data-src');
-              video.querySelector('source').src = videoSrc;
-              video.load();
-              observer.unobserve(video);
-            }
-          });
-        }, { threshold: 0.25 });
-
-        document.querySelectorAll('.home-section-videos-card video').forEach(video => {
-          observer.observe(video);
-        });
-
+        
         document.querySelectorAll('.home-section-videos-card').forEach(card => {
           const video = card.querySelector('video');
+      
+          // Lazy loading handling
+          video.addEventListener('loadeddata', () => {
+            video.currentTime = 1; // Load 1 second of video
+          });
 
           if (isMobile) {
-            // Keep popup functionality on mobile
             card.addEventListener('click', () => {
               const videoSrc = card.getAttribute('data-video');
-
               const instance = basicLightbox.create(`
                 <div class="video-popup-wrapper">
                   <video src="${videoSrc}" controls autoplay playsinline style="max-width: 90vw; max-height: 90vh; border-radius: 1rem;"></video>
@@ -176,7 +154,6 @@
               instance.show();
             });
           } else {
-            // Hover play and unmute on desktop
             card.addEventListener('mouseenter', () => {
               video.currentTime = 0;
               video.muted = false;
@@ -192,20 +169,19 @@
         });
       </script>
     </section>
-
     <footer id="footer">
       <script>
         fetch('Snippets/footer.html')
           .then(res => res.text())
           .then(data => {
             document.getElementById('footer').innerHTML = data;
+      
             const interval = setInterval(() => {
               const btn = document.querySelector(".whatsapp-floating-button");
               if (btn) {
                 clearInterval(interval);
                 gsap.delayedCall(3, () => {
                   gsap.fromTo(btn, { autoAlpha: 0, scale: 0 }, { duration: 1, autoAlpha: 1, scale: 1, ease: "back.out(1.7)" });
-
                   gsap.to(btn, {
                     y: -10,
                     duration: 1.5,
