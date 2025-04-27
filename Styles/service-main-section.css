@@ -1,0 +1,100 @@
+#services-main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+#services-main-section a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #BE1E28;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    width: fit-content;
+    border-radius: 4.5rem;
+    transition: background-color 0.3s ease;
+}
+
+#services-main-section a:hover {
+    background-color: #000;
+}
+
+.service-section-container-1 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    /* background: linear-gradient(90deg, #401619, #BE1E28); */
+    border-radius: 15px;
+    overflow: hidden;
+    height: 510px;
+}
+
+.service-section-container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    /* background: linear-gradient(90deg, #BE1E28, #401619); */
+    border-radius: 15px;
+    overflow: hidden;
+    height: 510px;
+}
+
+.service-section-container-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 53%;
+    padding: 0 2rem 0 0;
+    height: 100%;
+}
+
+.service-section-container-2 .service-section-container-left {
+    padding: 0 0 0 2rem;
+}
+
+#services-main-section img {
+    height: 100%;
+    width: 47%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.service-section-container-heading {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 3rem;
+    margin: 0;
+    padding: 0 12px;
+    background-color: #BE1E28;
+    color: #fff;
+}
+
+.service-section-container-subheading {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 2.6rem;
+}
+
+.service-section-container-content {
+    font-size: 1.15rem;
+}
+
+.service-section-container-heading-container {
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.service-section-container-heading-container img {
+    width: 48px;
+    aspect-ratio: unset !important;
+    height: unset !important;
+    margin: unset;
+    border-radius: 0 !important;
+    margin-right: -2px;
+}

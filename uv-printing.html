@@ -1,127 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>UV Printing</title>
-        <link rel="stylesheet" href="Styles/main.css">
-        <link rel="stylesheet" href="Styles/header.css">
-        <link rel="stylesheet" href="Styles/footer.css">
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-        <script
-            src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
-        <script
-            src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
-        <link rel="icon" type="image/png" href="Assets/Logo.svg">
-    </head>
-    <body>
-      <header class="page-width" id="header">
-        <script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UV Printing</title>
+    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/header.css">
+    <link rel="stylesheet" href="Styles/footer.css">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script
+      src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+    <link rel="icon" type="image/png" href="Assets/Logo.svg">
+  </head>
+  <body>
+    <header class="page-width" id="header">
+      <script>
                   fetch('Snippets/header.html')
                       .then(res => res.text())
                       .then(data => {
                         document.getElementById('header').innerHTML = data;
                   });
               </script>
-      </header>
-      <section class="page-width">
-        <div class="page-top-container">
-          <p class="page-heading">UV Printing</p>
-          <p class="page-subheading">We print everything in-house—banners,
-            stickers, wallpaper, and vehicle branding.</p>
-        </div>
-      </section>
-      <section class="page-width" id="home-section-videos">
-        <link rel="stylesheet" href="Styles/home-section-videos.css">
-        <div class="home-section-videos-inner-wrapper">
-          <div class="home-section-videos-inner">
-            <div class="home-section-videos-card" data-video="Assets/Video-1.mp4">
-              <video preload="metadata" muted playsinline>
-                <source src="Assets/Video-1.mp4" type="video/mp4">
-              </video>
-              <div class="video-overlay">
-                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
-              </div>
+    </header>
+    <section class="page-width">
+      <div class="page-top-container">
+        <p class="page-heading">UV Printing</p>
+        <p class="page-subheading">Durable, High-Quality Prints with
+          Cutting-Edge UV Technology.</p>
+      </div>
+    </section>
+    <section class="page-width" id="home-section-videos">
+      <link rel="stylesheet" href="Styles/home-section-videos.css">
+      <div class="home-section-videos-inner-wrapper">
+        <div class="home-section-videos-inner">
+          <div class="home-section-videos-card" data-video="Assets/Video-1.mp4">
+            <video preload="metadata" muted playsinline>
+              <source src="Assets/Video-1.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+              <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
-            <div class="home-section-videos-card">
-              <img class="home-section-videos-card-img"
-                src="Assets/printing-t-shirt-workshop_1016675-3173.jpg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/printing-t-shirt-workshop_1016675-3173.jpg">
+          </div>
+          <div class="home-section-videos-card" data-video="Assets/Video-2.mp4">
+            <video preload="metadata" muted playsinline>
+              <source src="Assets/Video-2.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+              <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
-            <div class="home-section-videos-card" data-video="Assets/Video-2.mp4">
-              <video preload="metadata" muted playsinline>
-                <source src="Assets/Video-2.mp4" type="video/mp4">
-              </video>
-              <div class="video-overlay">
-                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
-              </div>
+          </div>
+          <div class="home-section-videos-card" data-video="Assets/Video-3.mp4">
+            <video preload="metadata" muted playsinline>
+              <source src="Assets/Video-3.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+              <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
-            <div class="home-section-videos-card" data-video="Assets/Video-3.mp4">
-              <video preload="metadata" muted playsinline>
-                <source src="Assets/Video-3.mp4" type="video/mp4">
-              </video>
-              <div class="video-overlay">
-                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
-              </div>
+          </div>
+          <div class="home-section-videos-card" data-video="Assets/Video-4.mp4">
+            <video preload="metadata" muted playsinline>
+              <source src="Assets/Video-4.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+              <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
-            <div class="home-section-videos-card" data-video="Assets/Video-4.mp4">
-              <video preload="metadata" muted playsinline>
-                <source src="Assets/Video-4.mp4" type="video/mp4">
-              </video>
-              <div class="video-overlay">
-                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
-              </div>
+          </div>
+          <div class="home-section-videos-card" data-video="Assets/Video-9.mp4">
+            <video preload="metadata" muted playsinline>
+              <source src="Assets/Video-9.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+              <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
-            <div class="home-section-videos-card" data-video="Assets/Video-9.mp4">
-              <video preload="metadata" muted playsinline>
-                <source src="Assets/Video-9.mp4" type="video/mp4">
-              </video>
-              <div class="video-overlay">
-                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
-              </div>
+          </div>
+          <div class="home-section-videos-card" data-video="Assets/Video-5.mp4">
+            <video preload="metadata" muted playsinline>
+              <source src="Assets/Video-5.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+              <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
-            <div class="home-section-videos-card" data-video="Assets/Video-5.mp4">
-              <video preload="metadata" muted playsinline>
-                <source src="Assets/Video-5.mp4" type="video/mp4">
-              </video>
-              <div class="video-overlay">
-                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
-              </div>
+          </div>
+          <div class="home-section-videos-card" data-video="Assets/Video-6.mp4">
+            <video preload="metadata" muted playsinline>
+              <source src="Assets/Video-6.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+              <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
-            <div class="home-section-videos-card" data-video="Assets/Video-6.mp4">
-              <video preload="metadata" muted playsinline>
-                <source src="Assets/Video-6.mp4" type="video/mp4">
-              </video>
-              <div class="video-overlay">
-                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
-              </div>
+          </div>
+          <div class="home-section-videos-card" data-video="Assets/Video-7.mp4">
+            <video preload="metadata" muted playsinline>
+              <source src="Assets/Video-7.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+              <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
-            <div class="home-section-videos-card" data-video="Assets/Video-7.mp4">
-              <video preload="metadata" muted playsinline>
-                <source src="Assets/Video-7.mp4" type="video/mp4">
-              </video>
-              <div class="video-overlay">
-                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
-              </div>
-            </div>
-            <div class="home-section-videos-card" data-video="Assets/Video-8.mp4">
-              <video preload="metadata" muted playsinline>
-                <source src="Assets/Video-8.mp4" type="video/mp4">
-              </video>
-              <div class="video-overlay">
-                <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
-              </div>
+          </div>
+          <div class="home-section-videos-card" data-video="Assets/Video-8.mp4">
+            <video preload="metadata" muted playsinline>
+              <source src="Assets/Video-8.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+              <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
           </div>
         </div>
-        <a href="services.html" class="view-more-videos-btn">View more
-          Services</a>
-        <script>
+      </div>
+      <a href="services.html" class="view-more-videos-btn">View more
+        Services</a>
+      <script>
           const isMobile = window.innerWidth < 756;
         
           document.querySelectorAll('.home-section-videos-card').forEach(card => {
@@ -155,8 +155,8 @@
             }
           });
         </script>
-  
-        <!-- <button class="view-more-videos-btn">View More</button>
+
+      <!-- <button class="view-more-videos-btn">View More</button>
   
         <script>
           const wrapper = document.querySelector('.home-section-videos-inner-wrapper');
@@ -171,10 +171,10 @@
           });
         </script>
         -->
-  
-      </section>
-      <footer id="footer">
-        <script>
+
+    </section>
+    <footer id="footer">
+      <script>
                 fetch('Snippets/footer.html')
                   .then(res => res.text())
                   .then(data => {
@@ -202,6 +202,6 @@
                     }, 100); // check every 100ms
                   });
               </script>
-      </footer>
-    </body>
+    </footer>
+  </body>
 </html>

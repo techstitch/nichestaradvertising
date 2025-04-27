@@ -113,6 +113,10 @@
 
 .home-section-8-testimonial-left img {
     width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .home-section-8-testimonial-right img {
