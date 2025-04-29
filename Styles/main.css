@@ -179,6 +179,13 @@ button {
     will-change: transform, opacity;
 }
 
+.logo_nav_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
 @media(max-width:1000px) {
     .page-width {
         width: calc(100% - 10rem) !important;
@@ -242,20 +249,17 @@ button {
     }
 }
 
-.logo_nav_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
 @media(max-width:756px) {
     .page-width {
         padding: 0 1rem;
-        max-width: calc(100% - 2rem) !important;
+        width: calc(100% - 2rem) !important;
     }
 
     .logo_nav_container {
         gap: 20px;
+    }
+
+    .carousel-item {
+        font-size: 1.2rem;
     }
 }

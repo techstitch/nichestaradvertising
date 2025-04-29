@@ -97,3 +97,33 @@
         font-size: 1.6rem;
     }
 }
+
+@media(max-width:756px) {
+    #home-section-1 {
+        flex-direction: column-reverse;
+        align-items: center;
+        position: relative;
+        padding-top: 2rem;
+    }
+
+    .home-section-1-right-div {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        position: absolute !important;
+        right: 40px;
+        bottom: -170px;
+        opacity: .3;
+    }
+
+    .home-section-1-p {
+        width: 100%;
+        overflow: hidden;
+        text-wrap: wrap;
+    }
+
+    .home-section-1-p span {
+        font-size: 2.8rem;
+        line-height: 3.6rem;
+    }
+}
