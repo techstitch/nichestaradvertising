@@ -110,3 +110,25 @@
     height: auto;
     opacity: .8;
 }
+
+@media(max-width: 1400px) {
+    .home-section-5-left-container h2 {
+        font-size: 2rem;
+    }
+
+    .home-section-5-left-container p {
+        font-size: .9rem;
+        line-height: 1.2rem;
+    }
+
+    #clients_switch_button {
+        padding: 20px;
+        width: 27px;
+    }
+
+    #clients_switch_button:hover {
+        width: 37px;
+        padding: 10px;
+        transition: all .2s ease-out;
+    }
+}

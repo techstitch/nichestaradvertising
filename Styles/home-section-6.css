@@ -188,3 +188,10 @@
 .view-more-portfolio-btn:hover {
     background-color: #000;
 }
+
+@media(max-width:1000px) {
+    .portfolio-div:hover h3 {
+        font-size: 1.7rem;
+        bottom: calc(60% - 55px);
+    }
+}

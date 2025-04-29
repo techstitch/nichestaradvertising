@@ -119,16 +119,10 @@
     background: rgba(0, 0, 0, 0.4);
 }
 
-/* Optional: responsive tweaks */
-@media (max-width: 1024px) {
+
+@media (max-width: 756px) {
     .home-section-videos-inner {
         column-count: 2;
-    }
-}
-
-@media (max-width: 600px) {
-    .home-section-videos-inner {
-        column-count: 1;
     }
 }
 

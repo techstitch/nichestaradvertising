@@ -9,8 +9,9 @@
 .section-heading.red {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 2rem;
     color: #BE1E28;
+    width: 90%;
+    margin: 0 auto 2rem;
 }
 
 .home-section-8-testimonial-carousel {

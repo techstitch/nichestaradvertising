@@ -1,7 +1,8 @@
-footer{
+footer {
     background-color: #000;
 
 }
+
 footer .page-width {
     height: 440px;
     position: relative;
@@ -33,10 +34,12 @@ footer .page-width {
     width: 50%;
     height: auto;
 }
+
 .footer-column-1 img {
     width: 100%;
     height: auto;
 }
+
 .footer-column-2,
 .footer-column-3 {
     display: flex;
@@ -71,15 +74,25 @@ footer .page-width {
     margin-top: 15px;
     font-size: 1.2rem;
 }
-.footer-column-heading{
+
+.footer-column-heading {
     margin: 0 0 1rem;
     font-weight: 500;
     font-size: 1.2rem;
     color: #fff;
 }
-.footer-column-2 a, .footer-column-3 a{
+
+.footer-column-2 a,
+.footer-column-3 a {
     font-size: 1rem;
     text-decoration: none;
     margin-bottom: 15px;
     color: #fff;
+}
+
+@media(max-width:1000px) {
+    .footer-absolute-text {
+        font-size: 5rem;
+        bottom: -30px;
+    }
 }

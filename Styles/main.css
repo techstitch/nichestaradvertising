@@ -180,6 +180,10 @@ button {
 }
 
 @media(max-width:1000px) {
+    .page-width {
+        width: calc(100% - 10rem) !important;
+    }
+
     .burger {
         display: block !important;
         font-size: 30px;
@@ -247,7 +251,11 @@ button {
 
 @media(max-width:756px) {
     .page-width {
-        padding: 0 1.5rem;
-        max-width: 100vw;
+        padding: 0 1rem;
+        max-width: calc(100% - 2rem) !important;
+    }
+
+    .logo_nav_container {
+        gap: 20px;
     }
 }

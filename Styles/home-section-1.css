@@ -82,3 +82,18 @@
 .home-section-1-right-div img {
     position: absolute;
 }
+
+@media(max-width:1000px) {
+    .home-section-1-p span {
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+
+    .home-section-1-p .text-only {
+        font-size: 1.1rem;
+    }
+
+    #home-section-3 h2 {
+        font-size: 1.6rem;
+    }
+}

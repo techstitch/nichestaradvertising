@@ -76,3 +76,26 @@
     border-radius: 0 !important;
     margin-right: -2px;
 }
+
+@media (max-width: 1000px) {
+    .home-section-7-container-subheading {
+        font-size: 2rem;
+    }
+
+    #home-section-7 img {
+        width: 45%;
+        object-fit: cover;
+    }
+
+    .home-section-7-container-content {
+        font-size: 1rem;
+    }
+
+    .home-section-7-container-heading {
+        font-size: 1.2rem;
+    }
+
+    .home-section-7-container-heading-container {
+        margin-bottom: 2rem;
+    }
+}
