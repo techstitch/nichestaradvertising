@@ -205,6 +205,30 @@
                     }, 100); // check every 100ms
                   });
               </script>
-    </footer>
+    </footer> <!--Burger menu toggle-->
+    <script>
+      function toggleMenu() {
+        const tryToggle = () => {
+          const nav = document.getElementById("navMenu");
+          if (nav) {
+            nav.classList.toggle("active");
+    
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = nav.classList.contains("active") ? "hidden" : "";
+          } else {
+            setTimeout(tryToggle, 100);
+          }
+        };
+        tryToggle();
+      }
+    
+      function closeOnOutsideClick(event) {
+        const nav = document.getElementById("navMenu");
+        if (nav && nav.classList.contains("active")) {
+          nav.classList.remove("active");
+          document.body.style.overflow = "";
+        }
+      }
+    </script>
   </body>
 </html>

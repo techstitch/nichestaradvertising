@@ -14,7 +14,7 @@
 }
 
 .home-section-4-left {
-    width: 50%;
+    width: calc(50% - 10rem);
     position: sticky;
     top: 0;
     height: 100vh;
@@ -49,7 +49,7 @@
 }
 
 .home-section-4-right {
-    width: 50%;
+    width: calc(50% - 10rem);
     padding: 6rem 5rem 10rem;
     display: flex;
     flex-direction: column;
@@ -58,11 +58,13 @@
     align-items: center;
     color: white;
 }
-.our-process-image-dots{
+
+.our-process-image-dots {
     width: 65px;
     height: auto;
     margin-top: -40px;
 }
+
 .home-section-4-text-block {
     font-size: 2rem;
     font-weight: 400;
@@ -83,7 +85,8 @@
     font-weight: 300;
     margin-bottom: 0;
 }
-.home-section-4-heading{
+
+.home-section-4-heading {
     font-size: 4.4rem;
     font-weight: 600;
     color: #BE1E28;

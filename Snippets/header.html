@@ -1,25 +1,42 @@
 <link rel="stylesheet" href="./Styles/header.css">
-<a href="./index.html"><img src="Assets/New Project (7).png" alt="Logo"
-    class="logo"></a>
-<nav>
-  <a href="./">Home</a>
-  <a href="./about.html">About</a>
-  <div class="dropdown">
-    <a href="./services.html" class="dropbtn">Services</a>
-    <div class="dropdown-content">
-      <a href="./large-format-printing.html">Large format printing</a>
-      <a href="./acrylic-fabrication.html">Acrylic Fabrication</a>
-      <a href="./uv-printing.html">UV Printing</a>
-      <a href="./signages.html">Signages</a>
-      <a href="./display-stands-gondala-ends.html">Display stands & Gondola
-        ends</a>
-      <a href="./custom-tshirt-printing.html">Custom T-shirt printing</a>
-      <a href="./corporate-gifts.html">Corporate gifts</a>
-    </div>
+<div class="logo_nav_container">
+  <div class="burger" onclick="toggleMenu()">
+    &#9776; <!-- This is the ☰ symbol -->
   </div>
-  <a href="./portfolio.html">Portfolio</a>
-  <a href="./blog.html">Blog</a>
-</nav>
-<button onclick="location.href='./contact.html'">
-  Contact Us
-</button>
+  <a href="./index.html"><img src="Assets/New Project (7).png" alt="Logo"
+      class="logo"></a>
+</div>
+
+<!-- Navigation Menu -->
+<div class="nav-container" id="navMenu" onclick="closeOnOutsideClick(event)">
+  <nav onclick="event.stopPropagation()">
+    <span class="close-btn" onclick="toggleMenu()">×</span>
+    <a href="./">Home</a>
+    <a href="./about.html">About</a>
+    <div class="dropdown">
+      <a href="./services.html" class="dropbtn">Services</a>
+      <div class="dropdown-content">
+        <a href="./large-format-printing.html">Large format printing</a>
+        <a href="./acrylic-fabrication.html">Acrylic Fabrication</a>
+        <a href="./uv-printing.html">UV Printing</a>
+        <a href="./signages.html">Signages</a>
+        <a href="./display-stands-gondala-ends.html">Display stands & Gondola
+          ends</a>
+        <a href="./custom-tshirt-printing.html">Custom T-shirt printing</a>
+        <a href="./corporate-gifts.html">Corporate gifts</a>
+      </div>
+    </div>
+    <a href="./portfolio.html">Portfolio</a>
+    <a href="./blog.html">Blog</a>
+  </nav>
+</div>
+
+<button onclick="location.href='./contact.html'">Contact Us</button>
+
+<style>
+.burger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+</style>
