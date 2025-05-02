@@ -208,4 +208,10 @@
         align-items: start;
         gap: 15px;
     }
+    .home-section-8-testimonial-right p, .total-google-reviews-container div p{
+        font-size: 1rem;
+    }
+    .leave-review-button{
+        font-size: 1rem;
+    }
 }
