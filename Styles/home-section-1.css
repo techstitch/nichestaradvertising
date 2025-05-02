@@ -84,6 +84,10 @@
 }
 
 @media(max-width:1000px) {
+    .home-section-1-right-div img {
+        width: 100%;
+    }
+
     .home-section-1-p span {
         font-size: 3.5rem;
         line-height: 4rem;
@@ -125,5 +129,10 @@
     .home-section-1-p span {
         font-size: 2.8rem;
         line-height: 3.6rem;
+    }
+
+    .home-section-1-right-div img:last-of-type {
+        left: 70%;
+        top: 43%;
     }
 }

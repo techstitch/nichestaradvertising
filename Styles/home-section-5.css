@@ -132,3 +132,36 @@
         transition: all .2s ease-out;
     }
 }
+
+@media(max-width:756px) {
+    #home-section-5 {
+        max-width: calc(100% - 2rem);
+        margin: 3rem auto;
+        flex-direction: column;
+    }
+
+    .home-section-5-left-container {
+        width: calc(100% - 4rem);
+        align-items: start;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 2rem;
+    }
+
+    #clients_switch_button {
+        top: 0;
+        left: 50%;
+    }
+
+    .home-section-5-right-container {
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .home-section-5-right-container ul {
+        padding-left: 0;
+        gap: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}

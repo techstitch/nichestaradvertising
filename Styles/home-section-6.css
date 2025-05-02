@@ -195,3 +195,30 @@
         bottom: calc(60% - 55px);
     }
 }
+
+@media(max-width:756px) {
+    .section-6-inner a {
+        width: 100%;
+    }
+
+    .portfolio-div h3 {
+        font-size: .9rem;
+    }
+
+    .portfolio-div:hover h3 {
+        font-size: 1.3rem;
+        bottom: calc(65% - 55px);
+    }
+
+    .portfolio-div p {
+        font-size: 1rem;
+    }
+
+    .section-6-inner {
+        margin-bottom: 1rem;
+    }
+
+    .view-more-portfolio-btn {
+        margin: 2rem auto 3rem;
+    }
+}

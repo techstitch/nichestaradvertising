@@ -15,14 +15,11 @@ footer .page-width {
 
 .footer-absolute-text {
     position: absolute;
-    bottom: -37px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
-    font-size: 7rem;
-    text-wrap: nowrap;
-    color: #fff;
-    font-weight: 600;
+    width: 88%;
 }
 
 .footer-column-1 {
@@ -90,9 +87,19 @@ footer .page-width {
     color: #fff;
 }
 
-@media(max-width:1000px) {
+@media(max-width:756px) {
+    footer .page-width {
+        flex-direction: unset;
+        gap: 50px;
+        flex-wrap: wrap;
+        height: fit-content;
+        padding-bottom: 4rem;
+    }
+
     .footer-absolute-text {
-        font-size: 5rem;
-        bottom: -30px;
+        width: 93%;
+    }
+    .footer-column-2,.footer-column-3,.footer-column-4{
+        width: fit-content;
     }
 }

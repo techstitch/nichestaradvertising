@@ -254,6 +254,71 @@
               </script>
               
         </section>
+
+
+
+
+
+
+        <section class="home-section-4-mobile" id="home-section-4">
+          <link rel="stylesheet" href="Styles/home-section-4.css">
+          <div class="page-width home-section-4-container">
+            <h2 class="home-section-4-heading">OUR PROCESS</h2>
+              <div class="home-section-4-left">
+                <div class="home-section-4-image-wrapper">
+                  <div>
+                  <img src="Assets/Consultation & Requirements.png" class="home-section-4-image" />
+                  <div class="home-section-4-text-block" data-index="0">
+                    <p class="section-4-heading">Consultation & Requirements</p>
+                    <p class="section-4-content">We begin by understanding your project goals, scope, timeline, and design needs — including material type, size, and quantity. This helps us deliver tailored printing and signage solutions that align with your brand’s message and target audience.
+                    </p>
+                  </div>
+                  </div>
+                  <div>
+                  <img src="Assets/Design & Artwork.png" class="home-section-4-image" />
+                  <div class="home-section-4-text-block" data-index="1">
+                    <p class="section-4-heading">Design & Artwork</p>
+                    <p class="section-4-content">Our creative team develops custom layouts that reflect your brand identity and are optimized for large-format printing. Every detail — from colors to fonts — is designed for sharp, impactful, and print-ready results.
+                    </p>
+                  </div>
+                  </div>
+                  <div>
+                  <img src="Assets/Material Selection.png" class="home-section-4-image" />
+                  <div class="home-section-4-text-block" data-index="2">
+                    <p class="section-4-heading">Material Selection</p>
+                    <p class="section-4-content">We guide you in selecting the best materials based on durability, finish, visibility, and display environment. Whether for indoor or outdoor displays, glossy or matte, we ensure your visuals are built to last.
+                    </p>
+                  </div>
+                  </div>
+                  <div>
+                  <img src="Assets/Printing & Production.png" class="home-section-4-image" />
+                  <div class="home-section-4-text-block" data-index="3">
+                    <p class="section-4-heading">Printing & Production</p>
+                    <p class="section-4-content">Using advanced large-format printers and cutting-edge technology, we produce your materials with precision and consistency — ensuring every project meets approved specifications.
+                    </p>
+                  </div>
+                  </div>
+                  <div>
+                  <img src="Assets/Finishing & Quality Check.png" class="home-section-4-image" />
+                  <div class="home-section-4-text-block" data-index="4">
+                    <p class="section-4-heading">Finishing & Quality Check</p>
+                    <p class="section-4-content">After printing, we handle trimming, laminating, and mounting, followed by a thorough quality control check for color accuracy, clarity, and finish. Only the best materials are packed and delivered.
+                    </p>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+      </section>
+
+
+
+
+
+
+
+
+
         <section class="page-width" id="home-section-5">
             <link rel="stylesheet" href="Styles/home-section-5.css">
             <div class="home-section-5-left-container">
@@ -604,7 +669,7 @@
                       <br><br>
                       Every brand has a story, and we consider it our mission to bring yours to life through thoughtful, immersive design. Whether it's an exhibition stand, retail display, or brand activation, we work closely with you at every step to ensure that your vision is translated into a compelling physical environment.
                     </p>
-                                        </p>
+
                 </div>
             </div>
         </section>
@@ -846,41 +911,32 @@
         </footer>
         <!--Section 1 Script-->
         <script>
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.fromTo(
-        ".home-section-1-right-div img:last-of-type",
-        {
-          x: -120,
-          y: 80,
-          rotation: -10,
-          opacity: 0
-        },
-        {
-          x: 300,
-          y: 0,
-          rotation: 0,
-          opacity: 1,
-          ease: "expo.out",
-          scrollTrigger: {
-            trigger: ".home-section-1-right-div",
-            start: "top bottom",  
-            end: "top 60%",    
-            scrub: true
-          }
-        }
-      );
-      gsap.to(".home-section-1-right-div img:last-of-type", {
-        x: 100,
-        y: -240,
-        ease: "power1.out",
-        scrollTrigger: {
-          trigger: ".home-section-1-right-div",
-          start: "top 60%",    
-          end: "bottom top",  
-          scrub: true
-        }
-      });
+          gsap.registerPlugin(ScrollTrigger);
+        
+          gsap.fromTo(
+            ".home-section-1-right-div img:last-of-type",
+            {
+              x: -200,
+              y: 200,
+              opacity: 1,
+              rotation: -5
+            },
+            {
+              x: 200,
+              y: -200,
+              opacity: 1,
+              rotation: 0,
+              ease: "none",
+              scrollTrigger: {
+                trigger: ".home-section-1-right-div",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true
+              }
+            }
+          );
         </script>
+        
         <!--Burger menu toggle-->
         <script>
           function toggleMenu() {

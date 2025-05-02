@@ -174,3 +174,38 @@
     border-left: solid 2px #000;
     padding-left: 20px;
 }
+
+@media(max-width:756px) {
+    .home-section-8-testimonial-wrapper {
+        padding-left: 40px;
+    }
+
+    .home-section-8-testimonial {
+        min-width: calc(100% - 5.5rem);
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 20px;
+        height: inherit;
+    }
+
+    .home-section-8-testimonial-left {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: start;
+        align-items: center;
+        gap: 15px;
+        height: fit-content;
+    }
+
+    .home-section-8-testimonial-left img {
+        width: 50px;
+    }
+
+    .home-section-8-testimonial-right {
+        width: 100%;
+        justify-content: start;
+        align-items: start;
+        gap: 15px;
+    }
+}
