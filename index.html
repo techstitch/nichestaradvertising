@@ -254,12 +254,6 @@
               </script>
               
         </section>
-
-
-
-
-
-
         <section class="home-section-4-mobile" id="home-section-4">
           <link rel="stylesheet" href="Styles/home-section-4.css">
           <div class="page-width home-section-4-container">
@@ -310,15 +304,6 @@
               </div>
             </div> 
       </section>
-
-
-
-
-
-
-
-
-
         <section class="page-width" id="home-section-5">
             <link rel="stylesheet" href="Styles/home-section-5.css">
             <div class="home-section-5-left-container">
@@ -936,7 +921,35 @@
             }
           );
         </script>
-        
+        <!--Header Menu Dropdown Script-->
+        <script>
+  const observer = new MutationObserver(() => {
+    const toggleBtn = document.getElementById('toggleDropdown');
+    const dropdown = document.getElementById('dropdownContent');
+
+    if (toggleBtn && dropdown) {
+      const dropContainer = toggleBtn.closest('.dropdown');
+
+      toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('show');
+        dropContainer.classList.toggle('open');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!dropContainer.contains(e.target)) {
+          dropdown.classList.remove('show');
+          dropContainer.classList.remove('open');
+        }
+      });
+
+      // Once everything is set up, disconnect observer
+      observer.disconnect();
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+        </script>
         <!--Burger menu toggle-->
         <script>
           function toggleMenu() {

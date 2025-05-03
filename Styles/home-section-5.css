@@ -134,6 +134,10 @@
 }
 
 @media(max-width:756px) {
+    .home-section-5-left-container p {
+        width: 100%;
+    }
+
     #home-section-5 {
         max-width: calc(100% - 2rem);
         margin: 3rem auto;

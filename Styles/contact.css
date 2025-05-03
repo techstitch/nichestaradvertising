@@ -128,3 +128,31 @@
     margin: 0;
     font-size: 1.1rem;
 }
+
+@media(max-width:756px) {
+    .contact-section-2-inner {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-image-wrapper {
+        position: unset;
+        width: 100%;
+    }
+
+    .contact-section-3 {
+        flex-direction: column;
+    }
+
+    .contact-section-3 iframe {
+        width: 100%;
+    }
+
+    .contact-section-3 ul {
+        padding: 0;
+        width: 100%;
+    }
+}

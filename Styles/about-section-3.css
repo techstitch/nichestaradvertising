@@ -192,3 +192,78 @@
 .about-view-more-services-btn:hover {
     background-color: #000;
 }
+
+@media(max-width:756px) {
+    .about-why-choose-us-container {
+        padding: 3rem 0 1rem;
+    }
+
+    .about-why-choose-us-heading {
+        font-size: 1.1rem;
+    }
+
+    .about-why-choose-us-subheading {
+        font-size: .9rem;
+    }
+
+    .timeline-carousel {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -10px;
+    }
+
+    .timeline-years {
+        width: 100%;
+        height: 140px;
+        margin: 25px auto 35spx;
+    }
+
+    .timeline-years::before,
+    .timeline-years::after {
+        height: 70px;
+    }
+
+    .year-tab {
+        font-size: 1.5rem;
+        height: 40px;
+    }
+
+    .timeline-years-track {
+        width: 100%;
+    }
+
+    .nav-arrows svg {
+        width: 15px;
+        padding: 9px;
+    }
+
+    .timeline-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .nav-arrows {
+        width: 20%;
+    }
+
+    .year-details {
+        width: 70%;
+        height: 300px;
+    }
+
+    .year-detail h2 {
+        font-size: 1.1rem;
+        margin-top: 0;
+    }
+
+    .year-detail p {
+        font-size: .9rem;
+    }
+
+    #about-section-3 {
+        margin-bottom: 3rem;
+    }
+}

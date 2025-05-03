@@ -1,10 +1,9 @@
 <link rel="stylesheet" href="./Styles/header.css">
 <div class="logo_nav_container">
-  <div class="burger" onclick="toggleMenu()">
-    &#9776; <!-- This is the ☰ symbol -->
-  </div>
-  <a href="./index.html"><img src="Assets/New Project (7).png" alt="Logo"
-      class="logo"></a>
+  <div class="burger" onclick="toggleMenu()">&#9776;</div>
+  <a href="./index.html">
+    <img src="Assets/New Project (7).png" alt="Logo" class="logo">
+  </a>
 </div>
 
 <!-- Navigation Menu -->
@@ -13,9 +12,15 @@
     <span class="close-btn" onclick="toggleMenu()">×</span>
     <a href="./">Home</a>
     <a href="./about.html">About</a>
+
+    <!-- Dropdown -->
     <div class="dropdown">
-      <a href="./services.html" class="dropbtn">Services</a>
-      <div class="dropdown-content">
+      <div class="drop-wrapper">
+        <a href="./services.html" class="dropbtn">Services</a>
+        <img class="dropdown-toggle" id="toggleDropdown"
+          src="Assets/Vector 7.png">
+      </div>
+      <div class="dropdown-content" id="dropdownContent">
         <a href="./large-format-printing.html">Large format printing</a>
         <a href="./acrylic-fabrication.html">Acrylic Fabrication</a>
         <a href="./uv-printing.html">UV Printing</a>
@@ -26,6 +31,7 @@
         <a href="./corporate-gifts.html">Corporate gifts</a>
       </div>
     </div>
+
     <a href="./portfolio.html">Portfolio</a>
     <a href="./blog.html">Blog</a>
   </nav>

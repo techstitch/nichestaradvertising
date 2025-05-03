@@ -122,7 +122,11 @@
 
 @media (max-width: 756px) {
     .home-section-videos-inner {
-        column-count: 2;
+        column-count: 1;
+    }
+
+    .view-more-videos-btn {
+        margin: .5rem auto 3rem;
     }
 }
 

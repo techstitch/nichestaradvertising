@@ -69,3 +69,26 @@
     top: 0;
     right: 0;
 }
+
+@media(max-width:756px) {
+    #blog-section-1 li a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #blog-section-1 ul li div {
+        width: 100%;
+    }
+
+    #blog-section-1 ul li div {
+        position: unset;
+        width: 100%;
+    }
+
+    #blog-section-1 ul li p {
+        font-size: 1.6rem;
+    }
+}

@@ -23,8 +23,21 @@
     color: #fff;
     transition: all .2s ease-out;
 }
-.portfolio-section-container .home-section-videos-inner-wrapper{
+
+.portfolio-section-container .home-section-videos-inner-wrapper {
     margin-top: 3rem;
     padding-bottom: 50px;
     margin-bottom: 3rem;
+}
+
+@media(max-width:756px) {
+    .portfolio-section-header {
+        gap: 10px;
+        padding: 0;
+    }
+
+    .portfolio-section-header li {
+        font-size: .9rem;
+        padding: .75rem;
+    }
 }

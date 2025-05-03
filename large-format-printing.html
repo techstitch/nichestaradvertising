@@ -229,6 +229,34 @@
           document.body.style.overflow = "";
         }
       }
-    </script>
+    </script> <!--Header Menu Dropdown Script-->
+    <script>
+  const observer = new MutationObserver(() => {
+    const toggleBtn = document.getElementById('toggleDropdown');
+    const dropdown = document.getElementById('dropdownContent');
+
+    if (toggleBtn && dropdown) {
+      const dropContainer = toggleBtn.closest('.dropdown');
+
+      toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('show');
+        dropContainer.classList.toggle('open');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!dropContainer.contains(e.target)) {
+          dropdown.classList.remove('show');
+          dropContainer.classList.remove('open');
+        }
+      });
+
+      // Once everything is set up, disconnect observer
+      observer.disconnect();
+    }
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+        </script>
   </body>
 </html>
