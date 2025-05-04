@@ -115,7 +115,7 @@ button {
     padding: 15px;
     border-radius: 1000px;
     aspect-ratio: 1/1;
-    height: auto;
+    height: 35px;
     opacity: 0;
 }
 

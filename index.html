@@ -203,55 +203,56 @@
                 
               </div> 
               <script>
-                gsap.registerPlugin(ScrollTrigger);
-              
-                const textBlocks = document.querySelectorAll('.home-section-4-text-block');
-                const images = document.querySelectorAll('.home-section-4-image');
-              
-                function showImage(index) {
-                  const img = images[index];
-                  gsap.set(img, { opacity: 0, x: '-100%', y: '100%', zIndex: 2 });
-                  gsap.to(img, {
-                    opacity: 1,
-                    x: '0%',
-                    y: '0%',
-                    duration: 0.7,
-                    ease: 'power3.out',
-                  });
-                  img.classList.add('active');
-                }
-              
-                function hideImage(index) {
-                  const img = images[index];
-                  gsap.to(img, {
-                    opacity: 0,
-                    x: '-100%',
-                    y: '100%',
-                    duration: 1,
-                    ease: 'power3.in',
-                    onComplete: () => {
-                      img.classList.remove('active');
-                      gsap.set(img, { zIndex: 1 });
-                    }
-                  });
-                }
-              
-                const isMobile = window.matchMedia("(max-width: 756px)").matches;
-              
-                textBlocks.forEach((block, index) => {
-                  ScrollTrigger.create({
-                    trigger: block,
-                    scroller: isMobile ? '.home-section-4-right-wrapper' : null,
-                    start: isMobile ? "left center" : "top center",
-                    end: isMobile ? "right center" : "bottom center",
-                    horizontal: isMobile,
-                    onEnter: () => showImage(index),
-                    onEnterBack: () => showImage(index),
-                    onLeave: () => hideImage(index),
-                    onLeaveBack: () => hideImage(index),
+                document.addEventListener("DOMContentLoaded", () => {
+                  gsap.registerPlugin(ScrollTrigger);
+                
+                  const textBlocks = document.querySelectorAll('.home-section-4-text-block');
+                  const images = document.querySelectorAll('.home-section-4-image');
+                  const isSmallScreen = window.matchMedia("(max-width: 756px)").matches;
+                
+                  function showImage(index) {
+                    const img = images[index];
+                    gsap.set(img, { opacity: 0, x: '-100%', y: '100%', zIndex: 2 });
+                    gsap.to(img, {
+                      opacity: 1,
+                      x: '0%',
+                      y: '0%',
+                      duration: 0.7,
+                      ease: 'power3.out',
+                    });
+                    img.classList.add('active');
+                  }
+                
+                  function hideImage(index) {
+                    const img = images[index];
+                    gsap.to(img, {
+                      opacity: 0,
+                      x: '-100%',
+                      y: '100%',
+                      duration: 1,
+                      ease: 'power3.in',
+                      onComplete: () => {
+                        img.classList.remove('active');
+                        gsap.set(img, { zIndex: 1 });
+                      }
+                    });
+                  }
+                
+                  textBlocks.forEach((block, index) => {
+                    ScrollTrigger.create({
+                      trigger: block,
+                      scroller: isSmallScreen ? '.home-section-4-right-wrapper' : null,
+                      start: isSmallScreen ? "left center" : "top center",
+                      end: isSmallScreen ? "right center" : "bottom center",
+                      horizontal: isSmallScreen,
+                      onEnter: () => showImage(index),
+                      onEnterBack: () => showImage(index),
+                      onLeave: () => hideImage(index),
+                      onLeaveBack: () => hideImage(index),
+                    });
                   });
                 });
-              </script>
+                </script>
               
         </section>
         <section class="home-section-4-mobile" id="home-section-4">
@@ -591,16 +592,15 @@
         </script>
         
         <script>
-            const isMobile = window.innerWidth < 756;
+          document.addEventListener("DOMContentLoaded", () => {
+            const isTouchDevice = window.innerWidth < 756;
           
             document.querySelectorAll('.home-section-videos-card').forEach(card => {
               const video = card.querySelector('video');
           
-              if (isMobile) {
-                // Keep popup functionality on mobile
+              if (isTouchDevice) {
                 card.addEventListener('click', () => {
                   const videoSrc = card.getAttribute('data-video');
-          
                   const instance = basicLightbox.create(`
                     <div class="video-popup-wrapper">
                       <video src="${videoSrc}" controls autoplay playsinline style="max-width: 90vw; max-height: 90vh; border-radius: 1rem;"></video>
@@ -609,7 +609,6 @@
                   instance.show();
                 });
               } else {
-                // Hover play and unmute on desktop
                 card.addEventListener('mouseenter', () => {
                   video.currentTime = 0;
                   video.muted = false;
@@ -623,6 +622,7 @@
                 });
               }
             });
+          });
           </script>
         </section>
         <section class="page-width" id="home-section-7">
