@@ -164,8 +164,9 @@
 
     .home-section-5-right-container ul {
         padding-left: 0;
-        gap: 0;
+        gap: 1px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
+        padding-top: 1px;
     }
 }
