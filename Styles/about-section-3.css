@@ -15,6 +15,7 @@
 
 .about-why-choose-us-container img {
     width: 100vw;
+    max-width: 90rem;
 }
 
 .about-why-choose-us-heading {

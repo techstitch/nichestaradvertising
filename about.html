@@ -41,10 +41,10 @@
     </section>
     <section class="page-width" id="about-section-2">
       <link rel="stylesheet" href="Styles/home-section-2.css">
-      <div class="video-wrapper">
+      <div class="video-wrapper-about">
         <video autoplay muted loop playsinline class="home-section-2-video"
           id="videoModal" data-fancybox="video">
-          <source src="Assets/Niche Star Copy 01 (1).mp4" type="video/mp4">
+          <source src="Assets/Niche Star 2 Copy 02 (1).mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
 
@@ -570,12 +570,12 @@
                   gsap.fromTo(btn, { autoAlpha: 0, scale: 0 }, { duration: 1, autoAlpha: 1, scale: 1, ease: "back.out(1.7)" });
     
                   gsap.to(btn, {
-                    y: -10,
-                    duration: 1.5,
-                    repeat: -1,
-                    yoyo: true,
-                    ease: "power1.inOut"
-                  });
+  rotation: 360,
+  duration: 20,
+  repeat: -1,
+  ease: "linear",
+  transformOrigin: "50% 50%"
+});
                 });
               }
             }, 100); // check every 100ms

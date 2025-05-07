@@ -8,11 +8,11 @@ window.addEventListener("load", () => {
 
         // Floating animation loop
         gsap.to(btn, {
-            y: -10,
-            duration: 1.5,
+            rotation: 360,
+            duration: 20,
             repeat: -1,
-            yoyo: true,
-            ease: "power1.inOut"
-        });
+            ease: "linear",
+            transformOrigin: "50% 50%"
+          });
     });
 });

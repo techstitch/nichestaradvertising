@@ -434,7 +434,7 @@
                 <div class="image-wrapper">
                   <img src="Assets/acrylic.jpg" />
                 </div>
-                <h3>Acrylic Fabrication</h3>
+                <h3>UV Direct Printing</h3>
                 <img class="hyperlink_arrow" src="Assets/Group 28 (2).png">
                 <p>View more</p>
               </div>
@@ -445,7 +445,7 @@
                 <div class="image-wrapper">
                   <img src="Assets/Signages.jpg" />
                 </div>
-                <h3>Signages</h3>
+                <h3>Outdoor Advertising</h3>
                 <img class="hyperlink_arrow" src="Assets/Group 28 (2).png">
                 <p>View more</p>
               </div>
@@ -456,7 +456,8 @@
                 <div class="image-wrapper">
                   <img src="Assets/92c41505f2.jpg" />
                 </div>
-                <h3>UV Printing</h3>
+                <h3>Retail & Promotional
+                  Displays</h3>
                 <img class="hyperlink_arrow" src="Assets/Group 28 (2).png">
                 <p>View more</p>
               </div>
@@ -467,7 +468,7 @@
                 <div class="image-wrapper">
                   <img src="Assets/yogurt-drinks-section-supermarket_53876-63415.jpg" />
                 </div>
-                <h3>Display stands & Gondola ends</h3>
+                <h3>Signage Production</h3>
                 <img class="hyperlink_arrow" src="Assets/Group 28 (2).png">
                 <p>View more</p>
               </div>
@@ -478,7 +479,7 @@
                 <div class="image-wrapper">
                   <img src="Assets/printing-t-shirt-workshop_1016675-3173.jpg" />
                 </div>
-                <h3>Custom T-shirt printing</h3>
+                <h3>CNC Fabrication</h3>
                 <img class="hyperlink_arrow" src="Assets/Group 28 (2).png">
                 <p>View more</p>
               </div>
@@ -489,7 +490,19 @@
                 <div class="image-wrapper">
                   <img src="Assets/high-angle-woman-with-cardboard-box_23-2149445808.jpg" />
                 </div>
-                <h3>Corporate gifts</h3>
+                <h3>Exhibition & Event
+                  Branding</h3>
+                <img class="hyperlink_arrow" src="Assets/Group 28 (2).png">
+                <p>View more</p>
+              </div>
+            </a>
+            <a href="corporate-gifts.html">
+              <div class="portfolio-div">
+                <div class="image-wrapper">
+                  <img src="Assets/high-angle-woman-with-cardboard-box_23-2149445808.jpg" />
+                </div>
+                <h3>Specialty Materials &
+                  Effects</h3>
                 <img class="hyperlink_arrow" src="Assets/Group 28 (2).png">
                 <p>View more</p>
               </div>
@@ -882,12 +895,12 @@
                       gsap.fromTo(btn, { autoAlpha: 0, scale: 0 }, { duration: 1, autoAlpha: 1, scale: 1, ease: "back.out(1.7)" });
         
                       gsap.to(btn, {
-                        y: -10,
-                        duration: 1.5,
-                        repeat: -1,
-                        yoyo: true,
-                        ease: "power1.inOut"
-                      });
+  rotation: 360,
+  duration: 20,
+  repeat: -1,
+  ease: "linear",
+  transformOrigin: "50% 50%"
+});
                     });
                   }
                 }, 100); // check every 100ms

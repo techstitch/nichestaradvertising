@@ -8,20 +8,82 @@
 }
 
 .portfolio-section-header li {
-    background-color: #BE1E2820;
-    text-decoration: none;
-    list-style: none;
-    text-wrap: nowrap;
-    padding: 20px;
-    border-radius: 55px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #BE1E28;
+    padding: 24px 24px 24px 32px;
+    display: flex;
+    align-items: center;
+    border-radius: 99px;
+    position: relative;
     cursor: pointer;
-    transition: all .2s ease-out;
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    overflow: hidden;
+    white-space: nowrap;
+    color: #fff;
+    z-index: 2;
+    list-style: none;
+}
+
+.portfolio-section-header li .text {
+    color: #fff;
+    line-height: 1;
+    position: relative;
+    z-index: 5;
+    margin-right: 32px;
+}
+
+.portfolio-section-header li svg {
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+    transform: rotate(0deg) translateX(0);
+    transform-origin: left;
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.portfolio-section-header li span {
+    padding-right: 20px;
+    z-index: 2;
+}
+
+.portfolio-section-header li::before {
+    content: '';
+    background-color: #000;
+    width: 32px;
+    height: 32px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    border-radius: 99px;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.portfolio-section-header li:hover {
+    scale: 1.05;
+    transform: rotate(-2deg);
+}
+
+.portfolio-section-header li:hover svg {
+    transform: rotate(45deg) translateX(-8px);
+}
+
+.portfolio-section-header li:hover::before {
+    width: 100%;
+    height: 100%;
+    right: 0;
 }
 
 .portfolio-section-header li.active {
+    background-color: #000;
+    pointer-events: none;
+}
+
+.portfolio-section-header li.active::before {
     background-color: #BE1E28;
-    color: #fff;
-    transition: all .2s ease-out;
 }
 
 .portfolio-section-container .home-section-videos-inner-wrapper {
@@ -30,14 +92,24 @@
     margin-bottom: 3rem;
 }
 
-@media(max-width:756px) {
+@media(max-width: 756px) {
     .portfolio-section-header {
         gap: 10px;
         padding: 0;
     }
 
     .portfolio-section-header li {
-        font-size: .9rem;
-        padding: .75rem;
+        font-size: 0.9rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .portfolio-section-header li .text {
+        margin-right: 16px;
+    }
+
+    .portfolio-section-header li::before {
+        width: 24px;
+        height: 24px;
+        right: 1.25rem;
     }
 }
