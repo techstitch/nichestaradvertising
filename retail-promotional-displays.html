@@ -1,150 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Retail & Promotional Displays</title>
-        <link rel="stylesheet" href="Styles/main.css">
-        <link rel="stylesheet" href="Styles/header.css">
-        <link rel="stylesheet" href="Styles/footer.css">
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
-            async></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-        <script
-            src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
-        <script
-            src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
-        <link rel="icon" type="image/png" href="Assets/Logo.svg">
-    </head>
-    <body>
-        <header class="page-width" id="header">
-            <script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail & Promotional Displays</title>
+    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/header.css">
+    <link rel="stylesheet" href="Styles/footer.css">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script
+      src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+    <link rel="icon" type="image/png" href="Assets/Logo.svg">
+  </head>
+  <body>
+    <header class="page-width" id="header">
+      <script>
                   fetch('Snippets/header.html')
                       .then(res => res.text())
                       .then(data => {
                         document.getElementById('header').innerHTML = data;
                   });
               </script>
-        </header>
-        <section class="page-width">
-            <div class="page-top-container">
-                <p class="page-heading">Retail & Promotional Displays</p>
-                <p class="page-subheading">Comprehensive Retail & Promotional
-                    Display Solutions — Featuring Free-standing Units, POS
-                    Displays, Gondola Branding, Product Counters, Wall Murals,
-                    Vinyl Wraps, and Custom Branded Gifts.</p>
+    </header>
+    <section class="page-width">
+      <div class="page-top-container">
+        <p class="page-heading">Retail & Promotional Displays</p>
+        <p class="page-subheading">Comprehensive Retail & Promotional
+          Display Solutions — Featuring Free-standing Units, POS
+          Displays, Gondola Branding, Product Counters, Wall Murals,
+          Vinyl Wraps, and Custom Branded Gifts.</p>
+      </div>
+    </section>
+    <section class="page-width" id="home-section-videos">
+      <link rel="stylesheet" href="Styles/home-section-videos.css">
+      <div class="home-section-videos-inner-wrapper">
+        <div class="home-section-videos-inner">
+          <!--<div class="home-section-videos-card" data-video="Assets/Video-1.mp4">
+            <video preload="metadata" muted playsinline>
+              <source src="Assets/Video-1.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay">
+              <img src="Assets/Play Arrow.png" alt="Play" class="play-icon" />
             </div>
-        </section>
-        <section class="page-width" id="home-section-videos">
-            <link rel="stylesheet" href="Styles/home-section-videos.css">
-            <div class="home-section-videos-inner-wrapper">
-                <div class="home-section-videos-inner">
-                    <div class="home-section-videos-card"
-                        data-video="Assets/Video-1.mp4">
-                        <video preload="metadata" muted playsinline>
-                            <source src="Assets/Video-1.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <img src="Assets/Play Arrow.png" alt="Play"
-                                class="play-icon" />
-                        </div>
-                    </div>
-                    <div class="home-section-videos-card">
-                        <img class="home-section-videos-card-img"
-                            src="Assets/printing-t-shirt-workshop_1016675-3173.jpg">
-                    </div>
-                    <div class="home-section-videos-card"
-                        data-video="Assets/Video-2.mp4">
-                        <video preload="metadata" muted playsinline>
-                            <source src="Assets/Video-2.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <img src="Assets/Play Arrow.png" alt="Play"
-                                class="play-icon" />
-                        </div>
-                    </div>
-                    <div class="home-section-videos-card"
-                        data-video="Assets/Video-3.mp4">
-                        <video preload="metadata" muted playsinline>
-                            <source src="Assets/Video-3.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <img src="Assets/Play Arrow.png" alt="Play"
-                                class="play-icon" />
-                        </div>
-                    </div>
-                    <div class="home-section-videos-card"
-                        data-video="Assets/Video-4.mp4">
-                        <video preload="metadata" muted playsinline>
-                            <source src="Assets/Video-4.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <img src="Assets/Play Arrow.png" alt="Play"
-                                class="play-icon" />
-                        </div>
-                    </div>
-                    <div class="home-section-videos-card"
-                        data-video="Assets/Video-9.mp4">
-                        <video preload="metadata" muted playsinline>
-                            <source src="Assets/Video-9.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <img src="Assets/Play Arrow.png" alt="Play"
-                                class="play-icon" />
-                        </div>
-                    </div>
-                    <div class="home-section-videos-card"
-                        data-video="Assets/Video-5.mp4">
-                        <video preload="metadata" muted playsinline>
-                            <source src="Assets/Video-5.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <img src="Assets/Play Arrow.png" alt="Play"
-                                class="play-icon" />
-                        </div>
-                    </div>
-                    <div class="home-section-videos-card"
-                        data-video="Assets/Video-6.mp4">
-                        <video preload="metadata" muted playsinline>
-                            <source src="Assets/Video-6.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <img src="Assets/Play Arrow.png" alt="Play"
-                                class="play-icon" />
-                        </div>
-                    </div>
-                    <div class="home-section-videos-card"
-                        data-video="Assets/Video-7.mp4">
-                        <video preload="metadata" muted playsinline>
-                            <source src="Assets/Video-7.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <img src="Assets/Play Arrow.png" alt="Play"
-                                class="play-icon" />
-                        </div>
-                    </div>
-                    <div class="home-section-videos-card"
-                        data-video="Assets/Video-8.mp4">
-                        <video preload="metadata" muted playsinline>
-                            <source src="Assets/Video-8.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <img src="Assets/Play Arrow.png" alt="Play"
-                                class="play-icon" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="services.html" class="view-more-videos-btn">View more
-                Services</a>
-            <script>
+          </div>-->
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-1.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-2.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-3.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-4.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-5.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-6.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-7.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-8.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-9.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-10.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-11.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-12.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-13.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-14.jpeg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Retail & Promotional Displays/rpd-15.jpeg">
+          </div>
+        </div>
+      </div>
+      <a href="services.html" class="view-more-videos-btn">View more
+        Services</a>
+      <script>
           const isMobile = window.innerWidth < 756;
         
           document.querySelectorAll('.home-section-videos-card').forEach(card => {
@@ -179,7 +153,7 @@
           });
         </script>
 
-            <!-- <button class="view-more-videos-btn">View More</button>
+      <!-- <button class="view-more-videos-btn">View More</button>
   
         <script>
           const wrapper = document.querySelector('.home-section-videos-inner-wrapper');
@@ -195,9 +169,9 @@
         </script>
         -->
 
-        </section>
-        <footer id="footer">
-            <script>
+    </section>
+    <footer id="footer">
+      <script>
                 fetch('Snippets/footer.html')
                   .then(res => res.text())
                   .then(data => {
@@ -225,8 +199,8 @@
                     }, 100); // check every 100ms
                   });
               </script>
-        </footer> <!--Burger menu toggle-->
-        <script>
+    </footer> <!--Burger menu toggle-->
+    <script>
       function toggleMenu() {
         const tryToggle = () => {
           const nav = document.getElementById("navMenu");
@@ -250,7 +224,7 @@
         }
       }
     </script> <!--Header Menu Dropdown Script-->
-        <script>
+    <script>
   const observer = new MutationObserver(() => {
     const toggleBtn = document.getElementById('toggleDropdown');
     const dropdown = document.getElementById('dropdownContent');
@@ -278,5 +252,5 @@
 
   observer.observe(document.body, { childList: true, subtree: true });
         </script>
-    </body>
+  </body>
 </html>

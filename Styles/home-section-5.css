@@ -106,9 +106,9 @@
 }
 
 .home-section-5-right-container ul li img {
-    width: 42%;
+    width: 52%;
     height: auto;
-    opacity: .8;
+    opacity: 1;
 }
 
 @media(max-width: 1400px) {
