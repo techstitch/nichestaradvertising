@@ -138,7 +138,7 @@
         
                 const instance = basicLightbox.create(`
                   <div class="video-popup-wrapper">
-                    <video src="${videoSrc}" controls autoplay playsinline style="max-width: 90vw; max-height: 90vh; border-radius: 1rem;"></video>
+                    <video src="${videoSrc}" controls autoplay muted playsinline style="max-width: 90vw; max-height: 90vh; border-radius: 1rem;"></video>
                   </div>
                 `);
                 instance.show();
@@ -147,7 +147,7 @@
               // Hover play and unmute on desktop
               card.addEventListener('mouseenter', () => {
                 video.currentTime = 0;
-                video.muted = false;
+                video.muted = true;
                 video.play();
               });
         

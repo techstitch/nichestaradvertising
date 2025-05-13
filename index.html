@@ -318,98 +318,145 @@
                     src="Assets/uuid-d757d682-943d-49fd-b438-0061a5d758e1.svg">
                 <ul>
                     <li class="active">
-                        <img src="Assets/Clients/client-1.png">
+                        <img src="Assets/Clients/ns-client-1.png">
                     </li>
                     <li class="active">
-                        <img src="Assets/Clients/client-2.png">
+                        <img src="Assets/Clients/ns-client-2.png">
                     </li>
                     <li class="active">
-                        <img src="Assets/Clients/client-4.png">
+                        <img src="Assets/Clients/ns-client-3.png">
+                    </li> 
+                    <li class="active">
+                        <img src="Assets/Clients/ns-client-4.png">
                     </li>
                     <li class="active">
-                        <img src="Assets/Clients/client-5.png">
+                        <img src="Assets/Clients/ns-client-5.png">
                     </li>
                     <li class="active">
-                        <img src="Assets/Clients/client-6.jpg">
-                    </li>
-                    <li class="active">
-                        <img src="Assets/Clients/80.png">
+                        <img src="Assets/Clients/ns-client-6.png">
                     </li>
                     <li>
-                        <img src="Assets/Clients/client-8.png">
+                        <img src="Assets/Clients/ns-client-7.png">
                     </li>
                     <li>
-                        <img src="Assets/Clients/client-9.png">
+                        <img src="Assets/Clients/ns-client-8.png">
                     </li>
                     <li>
-                        <img src="Assets/Clients/client-10.png">
-                    </li>                    
-                    <li>
-                        <img src="Assets/Clients/client-7.jpg">
+                        <img src="Assets/Clients/ns-client-9.png">
                     </li>
                     <li>
-                        <img src="Assets/Clients/client-11.png">
+                        <img src="Assets/Clients/ns-client-10.png">
                     </li>
                     <li>
-                        <img src="Assets/Clients/client-12.png">
+                        <img src="Assets/Clients/ns-client-11.png">
                     </li>
+                    <li>
+                        <img src="Assets/Clients/ns-client-12.png">
+                    </li>
+                    <li>
+                        <img src="Assets/Clients/ns-client-13.png">
+                    </li>
+                    <li>
+                        <img src="Assets/Clients/ns-client-14.png">
+                    </li>
+                    <li>
+                        <img src="Assets/Clients/ns-client-15.png">
+                    </li>        
+                                        <li>
+                        <img src="Assets/Clients/ns-client-16.png">
+                    </li> 
+                                        <li>
+                        <img src="Assets/Clients/ns-client-17.png">
+                    </li> 
+                                        <li>
+                        <img src="Assets/Clients/ns-client-18.png">
+                    </li> 
+                                        <li>
+                        <img src="Assets/Clients/ns-client-19.png">
+                    </li> 
+                                        <li>
+                        <img src="Assets/Clients/ns-client-20.png">
+                    </li> 
+                                        <li>
+                        <img src="Assets/Clients/ns-client-21.png">
+                    </li> 
+                                        <li>
+                        <img src="Assets/Clients/ns-client-22.png">
+                    </li>                                                                                                                                     
                 </ul>
             </div>
-            <script>
-              gsap.registerPlugin(ModifiersPlugin); // Add this if not already registered
-            
-              const switchButton = document.getElementById('clients_switch_button');
-              const listItems = document.querySelectorAll('#home-section-5 ul li');
-            
-              let showingFirstSet = true;
-              let isAnimating = false;
-              let rotationCount = 0;
-            
-              switchButton.addEventListener('click', async () => {
-                if (isAnimating) return;
-                isAnimating = true;
-            
-                // ✅ Update rotation count
-                rotationCount += 360;
-            
-                // ✅ Force full, smooth rotation (no reset)
-                gsap.to(switchButton, {
-                  rotation: rotationCount,
-                  duration: 0.6,
-                  ease: "power2.inOut"
-                });
-            
-                const visibleSet = showingFirstSet ? [...listItems].slice(0, 6) : [...listItems].slice(6);
-                const hiddenSet = showingFirstSet ? [...listItems].slice(6) : [...listItems].slice(0, 6);
-            
-                // Animate old items out
-                await gsap.to(visibleSet, {
-                  y: -20,
-                  opacity: 0,
-                  stagger: 0.05,
-                  duration: 0.3
-                });
-            
-                // Switch visible sets
-                visibleSet.forEach(item => item.classList.remove('active'));
-                hiddenSet.forEach(item => item.classList.add('active'));
-            
-                // Animate new set in
-                await gsap.fromTo(hiddenSet,
-                  { y: 20, opacity: 0 },
-                  {
-                    y: 0,
-                    opacity: 1,
-                    stagger: 0.1,
-                    duration: 0.4,
-                    ease: "power2.out"
-                  }
-                );
-            
-                showingFirstSet = !showingFirstSet;
-                isAnimating = false;
-              });
-            </script>
+<script>
+  gsap.registerPlugin(ModifiersPlugin);
+
+  const switchButton = document.getElementById('clients_switch_button');
+  const listItems = document.querySelectorAll('#home-section-5 ul li');
+
+  let isAnimating = false;
+  let rotationCount = 0;
+  let currentIndex = 0;
+  const groupSize = 6;
+
+  switchButton.addEventListener('click', async () => {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    // Rotate the button
+    rotationCount += 360;
+    gsap.to(switchButton, {
+      rotation: rotationCount,
+      duration: 0.6,
+      ease: "power2.inOut"
+    });
+
+    const totalItems = listItems.length;
+
+    // Calculate indices
+    const oldStart = currentIndex;
+    const oldEnd = Math.min(oldStart + groupSize, totalItems);
+    const newStart = oldEnd % totalItems;
+    const newEnd = (newStart + groupSize) % totalItems;
+
+    // Get current and next sets
+    const currentSet = [...listItems].slice(oldStart, oldEnd);
+    let nextSet = [];
+
+    if (newEnd > newStart) {
+      nextSet = [...listItems].slice(newStart, newEnd);
+    } else {
+      // Looping over boundary
+      nextSet = [...listItems].slice(newStart).concat([...listItems].slice(0, newEnd));
+    }
+
+    // Animate old items out
+    await gsap.to(currentSet, {
+      y: -20,
+      opacity: 0,
+      stagger: 0.05,
+      duration: 0.3
+    });
+
+    // Remove and add 'active' classes
+    currentSet.forEach(item => item.classList.remove('active'));
+    nextSet.forEach(item => item.classList.add('active'));
+
+    // Animate new items in
+    await gsap.fromTo(nextSet,
+      { y: 20, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 0.4,
+        ease: "power2.out"
+      }
+    );
+
+    // Update index
+    currentIndex = newStart;
+    isAnimating = false;
+  });
+</script>
+
         </section>
         <section class="page-width" id="home-section-6">
           <link rel="stylesheet" href="Styles/home-section-6.css">
@@ -427,7 +474,7 @@
               </div>
             </a>
         
-            <a href="acrylic-fabrication.html">
+            <a href="uv-direct-printing.html">
               <div class="portfolio-div">
                 <div class="image-wrapper">
                   <img src="Assets/acrylic.jpg" />
@@ -438,7 +485,7 @@
               </div>
             </a>
         
-            <a href="signages.html">
+            <a href="outdoor-advertising.html">
               <div class="portfolio-div">
                 <div class="image-wrapper">
                   <img src="Assets/Signages.jpg" />
@@ -449,7 +496,7 @@
               </div>
             </a>
         
-            <a href="uv-printing.html">
+            <a href="retail-promotional-displays.html">
               <div class="portfolio-div">
                 <div class="image-wrapper">
                   <img src="Assets/92c41505f2.jpg" />
@@ -461,7 +508,7 @@
               </div>
             </a>
         
-            <a href="display-stands-gondala-ends.html">
+            <a href="signage-production.html">
               <div class="portfolio-div">
                 <div class="image-wrapper">
                   <img src="Assets/yogurt-drinks-section-supermarket_53876-63415.jpg" />
@@ -472,7 +519,7 @@
               </div>
             </a>
         
-            <a href="custom-tshirt-printing.html">
+            <a href="cnc-fabrication.html">
               <div class="portfolio-div">
                 <div class="image-wrapper">
                   <img src="Assets/printing-t-shirt-workshop_1016675-3173.jpg" />
@@ -483,7 +530,7 @@
               </div>
             </a>
         
-            <a href="corporate-gifts.html">
+            <a href="exhibition-event-branding.html">
               <div class="portfolio-div">
                 <div class="image-wrapper">
                   <img src="Assets/high-angle-woman-with-cardboard-box_23-2149445808.jpg" />
@@ -494,13 +541,12 @@
                 <p>View more</p>
               </div>
             </a>
-            <a href="corporate-gifts.html">
+            <a href="installation-finishing-services.html">
               <div class="portfolio-div">
                 <div class="image-wrapper">
                   <img src="Assets/high-angle-woman-with-cardboard-box_23-2149445808.jpg" />
                 </div>
-                <h3>Specialty Materials &
-                  Effects</h3>
+                <h3>Installation & Finishing Services</h3>
                 <img class="hyperlink_arrow" src="Assets/Group 28 (2).png">
                 <p>View more</p>
               </div>
@@ -622,7 +668,7 @@
               } else {
                 card.addEventListener('mouseenter', () => {
                   video.currentTime = 0;
-                  video.muted = false;
+                  video.muted = true;
                   video.play();
                 });
           
@@ -645,9 +691,7 @@
                     <p class="home-section-7-container-heading">OUR COMMITMENT</p>
                   </div>
                     <p class="home-section-7-container-subheading">Sustainability at the Core of Every Creation</p>
-                    <p class="home-section-7-container-content">At Niche Star, sustainability isn’t just a choice — it’s a responsibility. From material selection to stand design, we embed eco-conscious thinking into every project, creating exhibition spaces that leave lasting impressions, not footprints.
-                      As the first Tier 5 ESSA Sustainability Accredited Stand Builder, we’re committed to redefining exhibitions with net-zero solutions and environmentally responsible materials, helping shape a future where creativity and sustainability go hand in hand.
-                    </p>
+                    <p class="home-section-7-container-content">At Niche Star, we approach sustainability as a responsibility. From material selection to stand design, we incorporate eco-conscious thinking into our projects, aiming to create exhibition spaces that are both impactful and mindful of the environment. Our focus is on exploring net-zero solutions and environmentally responsible materials to support a more sustainable future in the exhibition industry.</p>
                 </div>
                 <img src="Assets/WhatsApp Image 2024-06-29 at 22.45.23_959283bb 1.png">
             </div>
@@ -724,66 +768,54 @@
                 <div class="home-section-8-testimonial-carousel-track">
                   <div class="home-section-8-testimonial">
                     <div class="home-section-8-testimonial-left">
-                      <p>Omar Al Fardan</p>
-                      <img src="Assets/home-testimonial-2.jpg" alt="Logo">
+                      <p>Habiba Malik</p>
+                      <img src="Assets/habiba malik.png" alt="Logo">
                     </div>
                     <div class="home-section-8-testimonial-right">
                       <img src="Assets/Group 29 (1).png" alt="Stars">
-                      <p>“From premium signage solutions to flawless UV printing, Niche Star’s work speaks volumes. Their team's expertise and flexibility made even the most challenging projects feel effortless.”</p>
+                      <p>“Working with this Niche advertising agency has been a game-changer for our business. Their strategic insights and creative solutions have significantly boosted our brand visibility. The Niche team is professional, responsive, and always brings fresh ideas to the table.”</p>
                     </div>
                   </div>
                   <div class="home-section-8-testimonial">
                     <div class="home-section-8-testimonial-left">
-                      <p>Fatima Al Suwaidi</p>
-                      <img src="Assets/home-testimonial-3.jpg" alt="Logo">
+                      <p>Sneha Mohan</p>
+                      <img src="Assets/neha mohan.png" alt="Logo">
                     </div>
                     <div class="home-section-8-testimonial-right">
                       <img src="Assets/Group 29 (1).png" alt="Stars">
-                      <p>“Professionalism, creativity, and delivery excellence — that’s what you get with Niche Star Advertising. We were impressed by the quality of their large-format prints and the sheer craftsmanship in their fabrication work.”</p>
-                    </div>
-                  </div>
-                
-                  <div class="home-section-8-testimonial">
-                    <div class="home-section-8-testimonial-left">
-                      <p>Khalid Al Muhairi</p>
-                      <img src="Assets/home-testimonial-4.jpg" alt="Logo">
-                    </div>
-                    <div class="home-section-8-testimonial-right">
-                      <img src="Assets/Group 29 (1).png" alt="Stars">
-                      <p>“We trusted Niche Star with our full event branding, and they nailed every element, from custom acrylic structures to branded merchandise. They made us look world-class.”</p>
-                    </div>
-                  </div>
-                
-                  <div class="home-section-8-testimonial">
-                    <div class="home-section-8-testimonial-left">
-                      <p>Zayed Al Qasimi</p>
-                      <img src="Assets/home-testimonial-5.jpg" alt="Logo">
-                    </div>
-                    <div class="home-section-8-testimonial-right">
-                      <img src="Assets/Group 29 (1).png" alt="Stars">
-                      <p>“The team at Niche Star brings unmatched energy and precision to every project. Their UV printing and custom display stands helped us elevate our in-store presence dramatically.”</p>
+                      <p>“I contacted Niche Star to curate couple of frames for my home and they've done that very beautifully & professionally. The team is very helpful & experienced in this field and I'll definitely recommend their services to my friends and family.”</p>
                     </div>
                   </div>
                   <div class="home-section-8-testimonial">
                     <div class="home-section-8-testimonial-left">
-                      <p>Saif Al Ghaith</p>
-                      <img src="Assets/home-testimonial-6.jpg" alt="Logo">
+                      <p>Zubair Azam</p>
+                      <img src="Assets/zubair.png" alt="Logo">
                     </div>
                     <div class="home-section-8-testimonial-right">
                       <img src="Assets/Group 29 (1).png" alt="Stars">
-                      <p>“Collaborating with Niche Star Advertising has been transformative for our marketing initiatives. Their attention to even the smallest details ensured our campaigns not only looked good but felt premium at every touchpoint.”</p>
+                      <p>“Very professional people. Verity of professional works and services are offered. Recommended to one looking for events management and events and roadshow stand manufacturing, printing needs.”</p>
+                    </div>
+                  </div>           
+                  <div class="home-section-8-testimonial">
+                    <div class="home-section-8-testimonial-left">
+                      <p>Alaa Aghiorly</p>
+                      <img src="Assets/alaa.png" alt="Logo">
+                    </div>
+                    <div class="home-section-8-testimonial-right">
+                      <img src="Assets/Group 29 (1).png" alt="Stars">
+                      <p>“Good production High quality with amazing services.”</p>
                     </div>
                   </div>
                   <div class="home-section-8-testimonial">
                     <div class="home-section-8-testimonial-left">
-                      <p>Ayesha Al Mansoori</p>
-                      <img src="Assets/home-testimonial-1.jpg" alt="Logo">
+                      <p>Homam Kamal</p>
+                      <img src="Assets/h unnamed.png" alt="Logo">
                     </div>
                     <div class="home-section-8-testimonial-right">
                       <img src="Assets/Group 29 (1).png" alt="Stars">
-                      <p>“Niche Star Advertising exceeded every expectation we had. Their ability to understand our brand vision and translate it into striking visual displays was exceptional. Every project felt collaborative, timely, and high-end.”</p>
+                      <p>“Reliable, high-quality, and always on time — a provider we fully trust for advertising and production materials!”</p>
                     </div>
-                  </div>              
+                  </div>
                 </div>
               </div>
           
@@ -796,7 +828,7 @@
                 <p>36 Reviews</p>
               </div>
             </div>
-            <a class="leave-review-button">Leave a Review</a>
+            <a href="https://www.google.com/search?sca_esv=bdb835347b1fb0e4&rlz=1C1GCEU_enIN1160IN1160&sxsrf=AHTn8zo9sLOP1I4_QKubObKTgXcy4amyGQ:1747168672077&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzcTcMwTGQV1L_avC0WkScbnmltKHKYHEZ27FuA4VxF_uDYFz2y8K1vae3GvU19mOTX9IwaychpWh0YinsqXoDARS5W6_qzcexvKsthO1vJROcbPpxtM5ndeU39lpiQ1OiCvfiiRV5C_iQRlBp-LnutW7t3_3&q=Niche+Star+Advertising+Billboards+Contracting+and+Design+LLC+Reviews&sa=X&ved=2ahUKEwiOir_ApqGNAxX0wzgGHZoyBZsQ0bkNegQIJxAD&biw=1536&bih=730&dpr=1.25#lrd=0x3e5f5dcd76955db1:0xba643ed7ff92c1,3,,,," class="leave-review-button" target="_blank" rel="noopener noreferrer">Leave a Review</a>
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
                   const track = document.querySelector('.home-section-8-testimonial-carousel-track');

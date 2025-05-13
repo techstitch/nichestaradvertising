@@ -445,103 +445,146 @@
         </p>
       </p>
     </div>
-    <div class="home-section-5-right-container">
-      <img id="clients_switch_button"
-        src="Assets/uuid-d757d682-943d-49fd-b438-0061a5d758e1.svg">
-      <ul>
-                     <li class="active">
-                        <img src="Assets/Clients/client-1.png">
+            <div class="home-section-5-right-container">
+                <img id="clients_switch_button"
+                    src="Assets/uuid-d757d682-943d-49fd-b438-0061a5d758e1.svg">
+                <ul>
+                    <li class="active">
+                        <img src="Assets/Clients/ns-client-1.png">
                     </li>
                     <li class="active">
-                        <img src="Assets/Clients/client-2.png">
+                        <img src="Assets/Clients/ns-client-2.png">
                     </li>
                     <li class="active">
-                        <img src="Assets/Clients/client-4.png">
+                        <img src="Assets/Clients/ns-client-3.png">
+                    </li> 
+                    <li class="active">
+                        <img src="Assets/Clients/ns-client-4.png">
                     </li>
                     <li class="active">
-                        <img src="Assets/Clients/client-5.png">
+                        <img src="Assets/Clients/ns-client-5.png">
                     </li>
                     <li class="active">
-                        <img src="Assets/Clients/client-6.jpg">
-                    </li>
-                    <li class="active">
-                        <img src="Assets/Clients/80.png">
+                        <img src="Assets/Clients/ns-client-6.png">
                     </li>
                     <li>
-                        <img src="Assets/Clients/client-8.png">
+                        <img src="Assets/Clients/ns-client-7.png">
                     </li>
                     <li>
-                        <img src="Assets/Clients/client-9.png">
+                        <img src="Assets/Clients/ns-client-8.png">
                     </li>
                     <li>
-                        <img src="Assets/Clients/client-10.png">
-                    </li>                    
-                    <li>
-                        <img src="Assets/Clients/client-7.jpg">
+                        <img src="Assets/Clients/ns-client-9.png">
                     </li>
                     <li>
-                        <img src="Assets/Clients/client-11.png">
+                        <img src="Assets/Clients/ns-client-10.png">
                     </li>
                     <li>
-                        <img src="Assets/Clients/client-12.png">
-                    </li>   
-      </ul>
-    </div>
-    <script>
-    gsap.registerPlugin(ModifiersPlugin); // Add this if not already registered
-  
-    const switchButton = document.getElementById('clients_switch_button');
-    const listItems = document.querySelectorAll('#home-section-5 ul li');
-  
-    let showingFirstSet = true;
-    let isAnimating = false;
-    let rotationCount = 0;
-  
-    switchButton.addEventListener('click', async () => {
-      if (isAnimating) return;
-      isAnimating = true;
-  
-      // ✅ Update rotation count
-      rotationCount += 360;
-  
-      // ✅ Force full, smooth rotation (no reset)
-      gsap.to(switchButton, {
-        rotation: rotationCount,
-        duration: 0.6,
-        ease: "power2.inOut"
-      });
-  
-      const visibleSet = showingFirstSet ? [...listItems].slice(0, 6) : [...listItems].slice(6);
-      const hiddenSet = showingFirstSet ? [...listItems].slice(6) : [...listItems].slice(0, 6);
-  
-      // Animate old items out
-      await gsap.to(visibleSet, {
-        y: -20,
-        opacity: 0,
-        stagger: 0.05,
-        duration: 0.3
-      });
-  
-      // Switch visible sets
-      visibleSet.forEach(item => item.classList.remove('active'));
-      hiddenSet.forEach(item => item.classList.add('active'));
-  
-      // Animate new set in
-      await gsap.fromTo(hiddenSet,
-        { y: 20, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          stagger: 0.1,
-          duration: 0.4,
-          ease: "power2.out"
-        }
-      );
-  
-      showingFirstSet = !showingFirstSet;
-      isAnimating = false;
+                        <img src="Assets/Clients/ns-client-11.png">
+                    </li>
+                    <li>
+                        <img src="Assets/Clients/ns-client-12.png">
+                    </li>
+                    <li>
+                        <img src="Assets/Clients/ns-client-13.png">
+                    </li>
+                    <li>
+                        <img src="Assets/Clients/ns-client-14.png">
+                    </li>
+                    <li>
+                        <img src="Assets/Clients/ns-client-15.png">
+                    </li>        
+                                        <li>
+                        <img src="Assets/Clients/ns-client-16.png">
+                    </li> 
+                                        <li>
+                        <img src="Assets/Clients/ns-client-17.png">
+                    </li> 
+                                        <li>
+                        <img src="Assets/Clients/ns-client-18.png">
+                    </li> 
+                                        <li>
+                        <img src="Assets/Clients/ns-client-19.png">
+                    </li> 
+                                        <li>
+                        <img src="Assets/Clients/ns-client-20.png">
+                    </li> 
+                                        <li>
+                        <img src="Assets/Clients/ns-client-21.png">
+                    </li> 
+                                        <li>
+                        <img src="Assets/Clients/ns-client-22.png">
+                    </li>                                                                                                                                     
+                </ul>
+            </div>
+<script>
+  gsap.registerPlugin(ModifiersPlugin);
+
+  const switchButton = document.getElementById('clients_switch_button');
+  const listItems = document.querySelectorAll('#home-section-5 ul li');
+
+  let isAnimating = false;
+  let rotationCount = 0;
+  let activeGroupIndex = 0; // renamed from currentIndex
+  const groupSize = 6;
+  const totalItems = listItems.length;
+
+  switchButton.addEventListener('click', async () => {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    // Rotate the button
+    rotationCount += 360;
+    gsap.to(switchButton, {
+      rotation: rotationCount,
+      duration: 0.6,
+      ease: "power2.inOut"
     });
-  </script>
+
+    // Get current set to hide
+    const currentSet = [];
+    for (let i = 0; i < groupSize; i++) {
+      const index = (activeGroupIndex + i) % totalItems;
+      currentSet.push(listItems[index]);
+    }
+
+    // Calculate next index and next set
+    activeGroupIndex = (activeGroupIndex + groupSize) % totalItems;
+    const nextSet = [];
+    for (let i = 0; i < groupSize; i++) {
+      const index = (activeGroupIndex + i) % totalItems;
+      nextSet.push(listItems[index]);
+    }
+
+    // Animate current set out
+    await gsap.to(currentSet, {
+      y: -20,
+      opacity: 0,
+      stagger: 0.05,
+      duration: 0.3
+    });
+
+    // Remove 'active' class from current set
+    currentSet.forEach(item => item.classList.remove('active'));
+
+    // Add 'active' class to next set
+    nextSet.forEach(item => item.classList.add('active'));
+
+    // Animate next set in
+    await gsap.fromTo(nextSet,
+      { y: 20, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 0.4,
+        ease: "power2.out"
+      }
+    );
+
+    isAnimating = false;
+  });
+</script>
 
   </section>
   <a href="services.html" class="about-view-more-services-btn">View More</a
