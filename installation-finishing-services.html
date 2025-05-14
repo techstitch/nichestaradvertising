@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Installation & Finishing Services</title>
-        <link rel="stylesheet" href="Styles/main.css">
-        <link rel="stylesheet" href="Styles/header.css">
-        <link rel="stylesheet" href="Styles/footer.css">
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
-            async></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-        <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-        <script
-            src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
-        <script
-            src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
-        <link rel="icon" type="image/png" href="Assets/Logo.svg">
-    </head>
-    <body>
-        <header class="page-width" id="header">
-            <script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation & Finishing Services</title>
+    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/header.css">
+    <link rel="stylesheet" href="Styles/footer.css">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+      async></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script
+      src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css">
+    <script
+      src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+    <link rel="icon" type="image/png" href="Assets/Logo.svg">
+  </head>
+  <body>
+    <header class="page-width" id="header">
+      <script>
                   fetch('Snippets/header.html')
                       .then(res => res.text())
                       .then(data => {
                         document.getElementById('header').innerHTML = data;
                   });
               </script>
-        </header>
-        <section class="page-width">
-            <div class="page-top-container">
-                <p class="page-heading">Installation & Finishing Services</p>
-                <p class="page-subheading">Complete Installation & Finishing
-                    Solutions — On-Site Vinyl & Signage Application, CNC
-                    Assembly, Lamination, Framing, and Safety-Compliant
-                    Setups.</p>
-            </div>
-        </section>
+    </header>
+    <section class="page-width">
+      <div class="page-top-container">
+        <p class="page-heading">Installation & Finishing Services</p>
+        <p class="page-subheading">Complete Installation & Finishing
+          Solutions — On-Site Vinyl & Signage Application, CNC
+          Assembly, Lamination, Framing, and Safety-Compliant
+          Setups.</p>
+      </div>
+    </section>
     <section class="page-width" id="home-section-videos">
       <link rel="stylesheet" href="Styles/home-section-videos.css">
       <div class="home-section-videos-inner-wrapper">
@@ -57,6 +57,13 @@
           <div class="home-section-videos-card">
             <img class="home-section-videos-card-img"
               src="Assets/Specialty Materials Effects/sme-1.jpeg">
+          </div> <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Specialty Materials Effects/sme-101.jpg">
+          </div>
+          <div class="home-section-videos-card">
+            <img class="home-section-videos-card-img"
+              src="Assets/Specialty Materials Effects/sme-102.jpg">
           </div>
           <div class="home-section-videos-card">
             <img class="home-section-videos-card-img"
@@ -87,6 +94,7 @@
             <img class="home-section-videos-card-img"
               src="Assets/Specialty Materials Effects/sme-8.jpeg">
           </div>
+
         </div>
       </div>
       <a href="services.html" class="view-more-videos-btn">View more
@@ -143,8 +151,8 @@
         -->
 
     </section>
-        <footer id="footer">
-            <script>
+    <footer id="footer">
+      <script>
                 fetch('Snippets/footer.html')
                   .then(res => res.text())
                   .then(data => {
@@ -172,8 +180,8 @@
                     }, 100); // check every 100ms
                   });
               </script>
-        </footer> <!--Burger menu toggle-->
-        <script>
+    </footer> <!--Burger menu toggle-->
+    <script>
       function toggleMenu() {
         const tryToggle = () => {
           const nav = document.getElementById("navMenu");
@@ -197,7 +205,7 @@
         }
       }
     </script> <!--Header Menu Dropdown Script-->
-        <script>
+    <script>
   const observer = new MutationObserver(() => {
     const toggleBtn = document.getElementById('toggleDropdown');
     const dropdown = document.getElementById('dropdownContent');
@@ -225,5 +233,5 @@
 
   observer.observe(document.body, { childList: true, subtree: true });
         </script>
-    </body>
+  </body>
 </html>

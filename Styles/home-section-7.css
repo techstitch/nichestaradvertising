@@ -37,8 +37,9 @@
 }
 
 #home-section-7 img {
-    aspect-ratio: 570 / 557;
     height: 100%;
+    width: 47%;
+    object-fit: cover;
     border-radius: 15px;
 }
 
